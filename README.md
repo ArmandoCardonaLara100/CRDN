@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CRDN — Architecture Studio
 
-## Getting Started
+A premium, minimalist portfolio website for the CRDN architecture studio.
+Single-page experience with an editorial "monograph plate" design system:
+every image is a numbered, hairline-framed plate with a drafting-style caption.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** (App Router, static prerender) · **React 19** · **TypeScript**
+- **Tailwind CSS v4** (design tokens in `src/app/globals.css`)
+- **Framer Motion** (scroll reveals, counters, modal choreography — honours `prefers-reduced-motion`)
+- **Radix UI Dialog** (accessible modals: focus trap, escape, labelling)
+- **Lucide** icons + hand-drawn brand glyphs
+- **next/font** (Instrument Serif · Instrument Sans · IBM Plex Mono)
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build (fully static)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Deploy on Vercel: import the repo, no configuration needed.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+  app/
+    layout.tsx          # fonts, metadata, skip link
+    page.tsx            # section composition
+    globals.css         # palette tokens, type stacks, shell/eyebrow utilities
+    icon.svg            # favicon
+  lib/
+    content.ts          # ⟵ ALL copy & data — edit this to publish real content
+    motion.ts           # shared easing, variants, viewport config
+  components/
+    layout/             # Header (nav, scrollspy, mobile menu), Footer, MotionShell
+    sections/           # Hero, About, Services, Projects (+Modal), Gallery,
+                        # Process, Stats, Testimonials, Contact
+    ui/                 # Plate, PlateArt, PlateCarousel, Modal, Reveal,
+                        # SectionHeader, ButtonLink, Counter, BrandIcon
+```
 
-## Learn More
+## Palette (brand-locked)
 
-To learn more about Next.js, take a look at the following resources:
+| Token     | Hex       | Use                              |
+| --------- | --------- | -------------------------------- |
+| `bone`    | `#FAF6F0` | primary background               |
+| `plaster` | `#F4EAE0` | secondary background             |
+| `sand`    | `#F4DFC8` | accent surface                   |
+| `ink`     | `#000000` | primary text                     |
+| `umber`   | `#5B5347` | derived neutral — secondary text |
+| `night`   | `#14110C` | derived neutral — inverted bands |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Replacing the placeholder images
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Every image on the site is a **plate**: until a photograph is supplied, an
+architectural line drawing (SVG) renders in its place. To swap in real
+photography, edit `src/lib/content.ts` and add a `src` to any plate:
 
-## Deploy on Vercel
+```ts
+plates: [
+  {
+    motif: "facade",                    // fallback drawing
+    src: "/images/casa-umbral-01.jpg",  // ⟵ add this line
+    caption: "South elevation — stone volumes toward the lake",
+    alt: "Casa Umbral seen from the lake at dusk",
+  },
+],
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Drop the files in `public/images/`. The component switches to a fully
+optimized `next/image` automatically — no markup changes needed.
+The same applies to the hero plate, the About portrait and every gallery item.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Publishing real content
+
+Everything editable lives in `src/lib/content.ts`:
+studio details and links (`studio`), hero copy, biography, services,
+the six projects, gallery captions, process steps, statistics,
+testimonials and contact channels. Components never hard-code copy.
+
+## Accessibility & performance
+
+- Fully static output, zero third-party requests, self-hosted fonts
+- Semantic landmarks, skip-to-content link, visible focus states
+- All interactive elements are labelled; carousels are keyboard-navigable
+- Animations disabled/reduced automatically under `prefers-reduced-motion`
+- AA-checked text contrast on every surface, including the dark bands

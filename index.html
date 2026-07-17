@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CRDN — Retail, Brand &amp; Commercial Design</title>
+  <meta name="description" content="CRDN es un estudio de diseño comercial. Arquitectura comercial, interiorismo y visual merchandising que convierten el espacio en una herramienta estratégica de negocio." />
+
+  <!-- Favicon (brand logo) -->
+  <link rel="icon" type="image/jpeg" href="public/images/logo.jpeg" />
+  <link rel="apple-touch-icon" href="public/images/logo.jpeg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Saltar al contenido</a>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="header">
+    <div class="shell header__inner">
+      <a class="brand" href="#home" aria-label="CRDN — inicio">
+        <img class="brand__logo" src="public/images/logo.jpeg" alt="" />
+        <span class="brand__word">CRDN</span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a class="nav__link is-active" data-spy="home" href="#home">Inicio</a></li>
+          <li><a class="nav__link" data-spy="about" href="#about">Estudio</a></li>
+          <li><a class="nav__link" data-spy="insights" href="#insights">Insights</a></li>
+          <li><a class="nav__link" data-spy="projects" href="#projects">Proyectos</a></li>
+          <li><a class="nav__link" data-spy="process" href="#process">Proceso</a></li>
+          <li><a class="nav__link" data-spy="contact" href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="header-cta" href="#contact">Iniciar Proyecto</a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <nav class="shell mobile-menu__list" aria-label="Menú móvil">
+        <ul style="list-style:none;margin:0;padding:0;">
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#home"><span class="eyebrow">01</span><span class="mobile-menu__num">Inicio</span></a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#about"><span class="eyebrow">02</span><span class="mobile-menu__num">Estudio</span></a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#insights"><span class="eyebrow">03</span><span class="mobile-menu__num">Insights</span></a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#projects"><span class="eyebrow">04</span><span class="mobile-menu__num">Proyectos</span></a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#process"><span class="eyebrow">05</span><span class="mobile-menu__num">Proceso</span></a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#contact"><span class="eyebrow">06</span><span class="mobile-menu__num">Contacto</span></a></li>
+        </ul>
+      </nav>
+      <div class="shell mobile-menu__foot">
+        <a class="eyebrow" href="mailto:comercial@crdnarquitectura.com">comercial@crdnarquitectura.com</a>
+        <span class="eyebrow">México</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" id="home">
+      <div class="shell hero__inner">
+        <div class="hero__meta">
+          <p class="eyebrow">CRDN — retail, brand &amp; commercial design</p>
+          <p class="eyebrow eyebrow--est">Est. 2009 · México</p>
+        </div>
+        <span class="hero__rule" aria-hidden="true"></span>
+
+        <h1 class="hero__title">
+          <span class="line-mask"><span class="line-mask__inner">Tu espacio también</span></span>
+          <span class="line-mask"><span class="line-mask__inner"><em>forma parte de tu estrategia de negocio.</em></span></span>
+        </h1>
+
+        <div class="hero__lede">
+          <p class="hero__support reveal" data-delay="1">
+            Combinamos arquitectura comercial, interiorismo y visual merchandising para
+            convertir cada metro cuadrado en una herramienta estratégica que fortalece la
+            experiencia del cliente y el valor de tu negocio.
+          </p>
+          <div class="hero__ctas reveal" data-delay="2">
+            <a class="btn btn--solid" href="#contact">
+              Iniciar Proyecto
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#projects">
+              Ver Proyectos
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__plate reveal" data-delay="2">
+          <figure class="plate" style="margin:0;">
+            <div class="plate__frame ar-hero">
+              <!-- PLACEHOLDER IMAGE: replace public/images/heroimg-hd.png with your hero photo -->
+              <img src="public/images/heroimg-hd.png" alt="Espacio comercial diseñado por CRDN" />
+            </div>
+            <figcaption class="plate__caption">
+              <!-- PLACEHOLDER CAPTION -->
+              <span class="eyebrow">Plate 01 — Proyecto de retail (reemplazar descripción)</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="hero__foot reveal" data-delay="3">
+          <p class="eyebrow">19.4194° N — 99.1602° W</p>
+          <p class="eyebrow eyebrow--mid">§ 01 — Práctica</p>
+          <a class="hero__scroll" href="#about" aria-label="Bajar a la sección de estudio">
+            <span class="eyebrow">Explorar</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ ABOUT ============================ -->
+    <section class="section bg-plaster" id="about">
+      <div class="shell">
+        <div class="reveal">
+          <div class="section-head__rule">
+            <span class="eyebrow">§ 02</span>
+            <span class="line" aria-hidden="true"></span>
+            <span class="eyebrow">El estudio</span>
+          </div>
+          <h2 class="section-head__title">El espacio es <em>el mejor vendedor de tu marca.</em></h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__portrait reveal" data-delay="1">
+            <figure class="plate" style="margin:0;">
+              <!-- PLACEHOLDER IMAGE: add a studio/portrait photo here -->
+              <div class="plate__frame img-ph ar-portrait">
+                <span class="img-ph__label">Retrato · reemplazar</span>
+              </div>
+              <figcaption class="plate__caption">
+                <span class="eyebrow">Dirección de CRDN — reemplazar</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="about__body">
+            <div class="reveal">
+              <p class="about__lead">
+                CRDN es un estudio de diseño comercial. Proyectamos retail, interiorismo y
+                experiencias de marca donde cada decisión de espacio, luz y material responde
+                a un objetivo de negocio.
+              </p>
+              <p class="about__text">
+                Desde 2009 hemos desarrollado más de 370 espacios comerciales en México. Lo que
+                nos define no es un estilo, sino un método: entender el negocio antes de dibujar
+                y cuidar cada detalle hasta la ejecución.
+              </p>
+            </div>
+
+            <div class="reveal" data-delay="1">
+              <blockquote class="about__quote">
+                <p>“Un buen espacio no se nota; se siente — y se traduce en ventas.”</p>
+              </blockquote>
+            </div>
+
+            <div class="reveal" data-delay="1">
+              <dl class="about__facts">
+                <div class="about__fact"><dt class="eyebrow">Fundado</dt><dd>2009</dd></div>
+                <div class="about__fact"><dt class="eyebrow">Sede</dt><dd>México</dd></div>
+                <div class="about__fact"><dt class="eyebrow">Espacios</dt><dd>370+</dd></div>
+                <div class="about__fact"><dt class="eyebrow">Sectores</dt><dd>12+</dd></div>
+              </dl>
+            </div>
+
+            <div class="reveal" data-delay="2">
+              <div class="about__spec">
+                <p class="eyebrow">Especialidades</p>
+                <ul>
+                  <li><span>Arquitectura comercial</span><span class="eyebrow">01</span></li>
+                  <li><span>Interiorismo</span><span class="eyebrow">02</span></li>
+                  <li><span>Visual merchandising</span><span class="eyebrow">03</span></li>
+                  <li><span>Branding espacial</span><span class="eyebrow">04</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ INSIGHTS (blog preview) ============================ -->
+    <section class="section" id="insights">
+      <div class="shell">
+        <div class="reveal">
+          <div class="section-head__rule">
+            <span class="eyebrow">§ 03</span>
+            <span class="line" aria-hidden="true"></span>
+            <span class="eyebrow">Insights</span>
+          </div>
+          <h2 class="section-head__title">Ideas sobre espacio, marca y comercio.</h2>
+          <p class="section-head__tagline">Nuestro journal editorial sobre diseño comercial, retail y la relación entre arquitectura y negocio.</p>
+        </div>
+
+        <!-- Each card is a placeholder blog preview. Replace image, title, date,
+             excerpt and the href="#" with the real article page later. -->
+        <div class="card-grid card-grid--3">
+
+          <article class="article-card reveal" data-delay="0">
+            <div class="article-card__media">
+              <div class="img-ph"><span class="img-ph__label">Imagen del artículo</span></div>
+            </div>
+            <div class="article-card__meta">
+              <span class="eyebrow">Artículo</span>
+              <span class="eyebrow">Marzo 2026</span>
+            </div>
+            <h3 class="article-card__title">El recorrido del cliente empieza en la vitrina.</h3>
+            <p class="article-card__excerpt">
+              Cómo el trazo de una tienda —flujo, jerarquía y puntos de pausa— guía la decisión
+              de compra mucho antes de que el cliente toque el producto.
+            </p>
+            <!-- PLACEHOLDER LINK: replace # with the real article URL -->
+            <a class="article-card__cta" href="https://www.paramountplus.com/home/">
+              Leer artículo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <article class="article-card reveal" data-delay="1">
+            <div class="article-card__media">
+              <div class="img-ph"><span class="img-ph__label">Imagen del artículo</span></div>
+            </div>
+            <div class="article-card__meta">
+              <span class="eyebrow">Artículo</span>
+              <span class="eyebrow">Febrero 2026</span>
+            </div>
+            <h3 class="article-card__title">Luz, material y deseo: la psicología del retail.</h3>
+            <p class="article-card__excerpt">
+              La temperatura de la luz y la textura de una superficie no son detalles estéticos:
+              son señales que el cliente lee sin darse cuenta.
+            </p>
+            <!-- PLACEHOLDER LINK: replace # with the real article URL -->
+            <a class="article-card__cta" href="#">
+              Leer artículo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <article class="article-card reveal" data-delay="2">
+            <div class="article-card__media">
+              <div class="img-ph"><span class="img-ph__label">Imagen del artículo</span></div>
+            </div>
+            <div class="article-card__meta">
+              <span class="eyebrow">Artículo</span>
+              <span class="eyebrow">Enero 2026</span>
+            </div>
+            <h3 class="article-card__title">Del plano a la marca: diseñar para vender.</h3>
+            <p class="article-card__excerpt">
+              Un espacio comercial no termina en el render. Contamos cómo traducimos la estrategia
+              de una marca en decisiones constructivas concretas.
+            </p>
+            <!-- PLACEHOLDER LINK: replace # with the real article URL -->
+            <a class="article-card__cta" href="#">
+              Leer artículo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PROJECTS (preview) ============================ -->
+    <section class="section bg-plaster" id="projects">
+      <div class="shell">
+        <div class="reveal">
+          <div class="section-head__rule">
+            <span class="eyebrow">§ 04</span>
+            <span class="line" aria-hidden="true"></span>
+            <span class="eyebrow">Proyectos</span>
+          </div>
+          <h2 class="section-head__title">Espacios que trabajan para la marca.</h2>
+          <p class="section-head__tagline">Una selección de proyectos de retail y diseño comercial. Explora el portafolio completo en la página de proyectos.</p>
+        </div>
+
+        <!-- Preview cards. Replace titles/summaries/images and confirm the links
+             point to the matching entries inside projects.html -->
+        <div class="card-grid card-grid--3">
+
+          <a class="project-card reveal" data-delay="0" href="projects.html#proyecto-1">
+            <div class="project-card__media">
+              <img src="public/images/case1-hd.png" alt="Tienda de calzado diseñada por CRDN" />
+            </div>
+            <div class="project-card__head">
+              <h3 class="project-card__title">Tienda de Calzado</h3>
+              <span class="project-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+            </div>
+            <p class="project-card__meta"><span class="eyebrow">Retail · 2024</span><span class="eyebrow">Calzado</span></p>
+            <p class="project-card__summary">Renovación integral de retail con foco en flujo, exhibición y experiencia de compra.</p>
+          </a>
+
+          <a class="project-card reveal" data-delay="1" href="projects.html#proyecto-2">
+            <div class="project-card__media">
+              <img src="public/images/case2-hd.png" alt="Boutique premium diseñada por CRDN" />
+            </div>
+            <div class="project-card__head">
+              <h3 class="project-card__title">Boutique Premium</h3>
+              <span class="project-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+            </div>
+            <p class="project-card__meta"><span class="eyebrow">Retail · 2023</span><span class="eyebrow">Moda</span></p>
+            <p class="project-card__summary">Interiorismo de boutique con materiales cálidos e iluminación de realce.</p>
+          </a>
+
+          <a class="project-card reveal" data-delay="2" href="projects.html#proyecto-3">
+            <div class="project-card__media">
+              <img src="public/images/case3-hd.png" alt="Módulo comercial diseñado por CRDN" />
+            </div>
+            <div class="project-card__head">
+              <h3 class="project-card__title">Módulo Comercial</h3>
+              <span class="project-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+            </div>
+            <p class="project-card__meta"><span class="eyebrow">Comercial · 2022</span><span class="eyebrow">Activación</span></p>
+            <p class="project-card__summary">Diseño de un módulo de retail desmontable para activaciones de marca.</p>
+          </a>
+
+        </div>
+
+        <div class="section__foot-cta reveal">
+          <a class="btn btn--outline" href="projects.html">
+            Ver todos los proyectos
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PROCESS ============================ -->
+    <section class="section" id="process">
+      <div class="shell">
+        <div class="reveal">
+          <div class="section-head__rule">
+            <span class="eyebrow">§ 05</span>
+            <span class="line" aria-hidden="true"></span>
+            <span class="eyebrow">Metodología</span>
+          </div>
+          <h2 class="section-head__title">METODOLOGÍA.</h2>
+          <p class="section-head__tagline">Un proceso probado en más de 370 espacios comerciales.</p>
+        </div>
+
+        <ol class="process__list">
+          <span class="process__spine" aria-hidden="true"></span>
+
+          <li class="process__step">
+            <span class="process__dot" aria-hidden="true"></span>
+            <div class="process__row reveal">
+              <div class="process__num-wrap"><p class="process__num" aria-hidden="true">01</p></div>
+              <div class="process__title-wrap"><h3 class="process__title">Diagnóstico</h3></div>
+              <p class="process__desc">Analizamos el negocio, el usuario y el espacio para identificar oportunidades estratégicas.</p>
+            </div>
+          </li>
+          <li class="process__step">
+            <span class="process__dot" aria-hidden="true"></span>
+            <div class="process__row reveal">
+              <div class="process__num-wrap"><p class="process__num" aria-hidden="true">02</p></div>
+              <div class="process__title-wrap"><h3 class="process__title">Estrategia</h3></div>
+              <p class="process__desc">Definimos el concepto que guiará cada decisión del proyecto.</p>
+            </div>
+          </li>
+          <li class="process__step">
+            <span class="process__dot" aria-hidden="true"></span>
+            <div class="process__row reveal">
+              <div class="process__num-wrap"><p class="process__num" aria-hidden="true">03</p></div>
+              <div class="process__title-wrap"><h3 class="process__title">Diseño</h3></div>
+              <p class="process__desc">Desarrollamos la propuesta arquitectónica, el interiorismo y la estrategia de visual merchandising.</p>
+            </div>
+          </li>
+          <li class="process__step">
+            <span class="process__dot" aria-hidden="true"></span>
+            <div class="process__row reveal">
+              <div class="process__num-wrap"><p class="process__num" aria-hidden="true">04</p></div>
+              <div class="process__title-wrap"><h3 class="process__title">Proyecto Ejecutivo</h3></div>
+              <p class="process__desc">Traducimos el concepto en documentación técnica lista para construirse.</p>
+            </div>
+          </li>
+          <li class="process__step">
+            <span class="process__dot" aria-hidden="true"></span>
+            <div class="process__row reveal">
+              <div class="process__num-wrap"><p class="process__num" aria-hidden="true">05</p></div>
+              <div class="process__title-wrap"><h3 class="process__title">Ejecución</h3></div>
+              <p class="process__desc">Coordinamos y supervisamos cada etapa para asegurar que el proyecto se materialice conforme a la estrategia definida.</p>
+            </div>
+          </li>
+          <li class="process__step">
+            <span class="process__dot" aria-hidden="true"></span>
+            <div class="process__row reveal">
+              <div class="process__num-wrap"><p class="process__num" aria-hidden="true">06</p></div>
+              <div class="process__title-wrap"><h3 class="process__title">Entrega Llave en Mano</h3></div>
+              <p class="process__desc">Un espacio preparado para operar, conectar con las personas y acompañar el crecimiento del negocio.</p>
+            </div>
+          </li>
+        </ol>
+
+        <p class="process__closing reveal">
+          Cada proyecto tiene un objetivo común: transformar el espacio en una herramienta estratégica para la marca.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================ STATS ============================ -->
+    <section class="section--tight bg-night section--dark" aria-label="CRDN en números">
+      <div class="shell">
+        <div class="reveal">
+          <div class="section-head__rule">
+            <span class="eyebrow">CRDN</span>
+            <span class="line" aria-hidden="true"></span>
+            <span class="eyebrow">En números</span>
+          </div>
+        </div>
+        <dl class="stats__grid">
+          <div class="stat reveal" data-delay="0">
+            <dd class="stat__value"><span data-count="15" data-suffix="+">0</span></dd>
+            <dt class="stat__label eyebrow">Años de Experiencia</dt>
+          </div>
+          <div class="stat reveal" data-delay="1">
+            <dd class="stat__value"><span data-count="370" data-suffix="+">0</span></dd>
+            <dt class="stat__label eyebrow">Espacios Desarrollados</dt>
+          </div>
+          <div class="stat reveal" data-delay="2">
+            <dd class="stat__value"><span data-count="12" data-suffix="+">0</span></dd>
+            <dt class="stat__label eyebrow">Sectores Atendidos</dt>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============================ TESTIMONIALS ============================ -->
+    <section class="section" id="testimonials">
+      <div class="shell">
+        <div class="reveal">
+          <div class="section-head__rule">
+            <span class="eyebrow">§ 06</span>
+            <span class="line" aria-hidden="true"></span>
+            <span class="eyebrow">Testimonios</span>
+          </div>
+          <h2 class="section-head__title">Lo que dicen nuestros clientes.</h2>
+        </div>
+
+        <!-- PLACEHOLDER testimonials — replace names, roles and quotes with real ones. -->
+        <div class="card-grid card-grid--3">
+
+          <figure class="testi-card reveal" data-delay="0" style="margin:0;">
+            <figcaption class="eyebrow">Cliente — Cadena de calzado</figcaption>
+            <blockquote class="testi-card__quote">“Entendieron el negocio antes de proponer una sola idea. Rediseñaron nuestras tiendas cuidando cada peso invertido y explicando cada decisión hasta que la comprendimos. El resultado fue inmediato: los clientes recorren más, se quedan más tiempo y las ventas por metro cuadrado subieron. No contratamos un despacho de diseño; ganamos un socio estratégico que piensa como nosotros.”</blockquote>
+            <div class="testi-card__foot">
+              <p class="testi-card__name">Nombre del Cliente</p>
+              <button class="testi-card__more" type="button" data-modal-target="testi-modal-1" aria-haspopup="dialog">Leer más</button>
+            </div>
+          </figure>
+
+          <figure class="testi-card reveal" data-delay="1" style="margin:0;">
+            <figcaption class="eyebrow">Cliente — Boutique de moda</figcaption>
+            <blockquote class="testi-card__quote">“Convirtieron un local complicado en nuestra mejor tienda. Cada detalle —la luz, los materiales, el recorrido— tiene una razón comercial, no solo estética.”</blockquote>
+            <div class="testi-card__foot">
+              <p class="testi-card__name">Nombre del Cliente</p>
+            </div>
+          </figure>
+
+          <figure class="testi-card reveal" data-delay="2" style="margin:0;">
+            <figcaption class="eyebrow">Cliente — Retail comercial</figcaption>
+            <blockquote class="testi-card__quote">“Cumplieron tiempos, presupuesto y una calidad de ejecución que rara vez encuentras. Un año después, no cambiaríamos nada.”</blockquote>
+            <div class="testi-card__foot">
+              <p class="testi-card__name">Nombre del Cliente</p>
+            </div>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CONTACT ============================ -->
+    <section class="section bg-sand" id="contact">
+      <div class="shell">
+        <div class="reveal">
+          <div class="section-head__rule">
+            <span class="eyebrow">§ 07</span>
+            <span class="line" aria-hidden="true"></span>
+            <span class="eyebrow">Contacto</span>
+          </div>
+          <h2 class="section-head__title">Todo gran proyecto comienza con una buena conversación.</h2>
+        </div>
+
+        <p class="contact__support reveal" data-delay="1">
+          Cuéntanos qué quieres lograr; diseñaremos una estrategia espacial que fortalezca tu
+          marca, conecte con las personas y aporte valor a tu negocio.
+        </p>
+
+        <ul class="contact__grid" style="list-style:none;padding:0;">
+          <li class="reveal" data-delay="0">
+            <a class="contact__item" href="tel:+524774088056" aria-label="Teléfono: 477 408 80 56">
+              <span class="contact__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <span><span class="contact__label eyebrow">Teléfono</span><span class="contact__value">477 408 8056</span></span>
+            </a>
+          </li>
+          <li class="reveal" data-delay="1">
+            <a class="contact__item" href="mailto:comercial@crdnarquitectura.com" aria-label="Email: comercial@crdnarquitectura.com">
+              <span class="contact__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </span>
+              <span><span class="contact__label eyebrow">Email</span><span class="contact__value">comercial@crdnarquitectura.com</span></span>
+            </a>
+          </li>
+          <li class="reveal" data-delay="2">
+            <a class="contact__item" href="https://wa.me/525542108800" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp: escríbenos">
+              <span class="contact__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+              </span>
+              <span><span class="contact__label eyebrow">WhatsApp</span><span class="contact__value">Escríbenos</span></span>
+            </a>
+          </li>
+          <li class="reveal" data-delay="2">
+            <a class="contact__item" href="https://instagram.com/crdnarquitectura" target="_blank" rel="noopener noreferrer" aria-label="Instagram: @crdnarquitectura">
+              <span class="contact__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </span>
+              <span><span class="contact__label eyebrow">Instagram</span><span class="contact__value">@crdnarquitectura</span></span>
+            </a>
+          </li>
+          <li class="reveal" data-delay="3">
+            <a class="contact__item" href="https://maps.google.com/?q=Orizaba+42,+Roma+Norte,+Mexico+City" target="_blank" rel="noopener noreferrer" aria-label="Ubicación: Roma Norte, CDMX">
+              <span class="contact__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <span><span class="contact__label eyebrow">Estudio</span><span class="contact__value">Roma Norte, CDMX</span></span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="contact__addr eyebrow reveal">Orizaba 42, Roma Norte, Ciudad de México — visitas con cita previa</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <div class="shell footer__inner">
+      <p class="footer__word" aria-hidden="true">CRDN</p>
+      <p class="footer__note">Retail, brand &amp; commercial design — diseñamos espacios que trabajan para tu marca desde México, desde 2009.</p>
+
+      <ul class="footer__nav">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#about">Estudio</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#process">Proceso</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+
+      <!-- Social / contact links (LinkedIn removed) -->
+      <div class="footer__social">
+        <a href="https://instagram.com/crdnarquitectura" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        </a>
+        <a href="https://wa.me/525542108800" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+        </a>
+        <a href="mailto:comercial@crdnarquitectura.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+      </div>
+
+      <div class="footer__divider" aria-hidden="true"></div>
+
+      <div class="footer__base">
+        <p class="eyebrow" style="color:rgba(250,246,240,0.5);">© <span data-year>2026</span> CRDN. Todos los derechos reservados.</p>
+        <button class="footer__top" type="button" aria-label="Volver arriba">
+          <span class="eyebrow">Volver arriba</span>
+          <span class="footer__top-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Testimonial modal (long quote) -->
+  <div class="modal" id="testi-modal-1" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Testimonio completo">
+    <div class="modal__panel">
+      <button class="modal__close" type="button" data-modal-close aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <p class="eyebrow">Cliente — Cadena de calzado</p>
+      <blockquote class="quote">“Entendieron el negocio antes de proponer una sola idea. Rediseñaron nuestras tiendas cuidando cada peso invertido y explicando cada decisión hasta que la comprendimos. El resultado fue inmediato: los clientes recorren más, se quedan más tiempo y las ventas por metro cuadrado subieron. No contratamos un despacho de diseño; ganamos un socio estratégico que piensa como nosotros.”</blockquote>
+      <p class="attr">Nombre del Cliente</p>
+    </div>
+  </div>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>
