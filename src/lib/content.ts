@@ -65,12 +65,12 @@ export const studio = {
 };
 
 export const nav = [
-  { label: "Home", href: "#home", id: "home" },
-  { label: "About", href: "#about", id: "about" },
-  { label: "Services", href: "#services", id: "services" },
-  { label: "Projects", href: "#projects", id: "projects" },
-  { label: "Process", href: "#process", id: "process" },
-  { label: "Contact", href: "#contact", id: "contact" },
+  { label: "Inicio", href: "#home", id: "home" },
+  { label: "Estudio", href: "#about", id: "about" },
+  { label: "Insights", href: "#insights", id: "insights" },
+  { label: "Proyectos", href: "#projects", id: "projects" },
+  { label: "Proceso", href: "#process", id: "process" },
+  { label: "Contacto", href: "#contact", id: "contact" },
 ] as const;
 
 export const hero = {
@@ -121,34 +121,48 @@ export const about = {
   ],
 };
 
-export const services = {
+export interface Article {
+  key: string;
+  date: string;
+  title: string;
+  excerpt: string;
+  href: string;
+}
+
+export const insightsSection = {
   index: "03",
-  label: "Services",
-  heading: "Three ways of working. One standard of care.",
-  items: [
-    {
-      key: "residential",
-      tag: "RES",
-      title: "Residential Architecture",
-      description:
-        "Private houses conceived as long-term companions — sited with care, planned around daily ritual, and detailed to age gracefully.",
-    },
-    {
-      key: "commercial",
-      tag: "COM",
-      title: "Commercial Architecture",
-      description:
-        "Workplaces, hospitality and retail that carry a brand through space: buildings that perform commercially without raising their voice.",
-    },
-    {
-      key: "interiors",
-      tag: "INT",
-      title: "Interior Design",
-      description:
-        "Interiors resolved to the last junction — joinery, stone, textile and light composed as one continuous material palette.",
-    },
-  ],
+  label: "Insights",
+  heading: "Ideas sobre espacio, marca y comercio.",
+  tagline:
+    "Nuestro journal editorial sobre diseño comercial, retail y la relación entre arquitectura y negocio.",
 };
+
+export const insights: Article[] = [
+  {
+    key: "vitrina",
+    date: "Marzo 2026",
+    title: "El recorrido del cliente empieza en la vitrina.",
+    excerpt:
+      "Cómo el trazo de una tienda —flujo, jerarquía y puntos de pausa— guía la decisión de compra mucho antes de que el cliente toque el producto.",
+    href: "#",
+  },
+  {
+    key: "luz-material",
+    date: "Febrero 2026",
+    title: "Luz, material y deseo: la psicología del retail.",
+    excerpt:
+      "La temperatura de la luz y la textura de una superficie no son detalles estéticos: son señales que el cliente lee sin darse cuenta.",
+    href: "#",
+  },
+  {
+    key: "plano-marca",
+    date: "Enero 2026",
+    title: "Del plano a la marca: diseñar para vender.",
+    excerpt:
+      "Un espacio comercial no termina en el render. Contamos cómo traducimos la estrategia de una marca en decisiones constructivas concretas.",
+    href: "#",
+  },
+];
 
 export const projectsSection = {
   index: "04",
@@ -487,28 +501,30 @@ export const stats = [
 
 export const testimonialsSection = {
   index: "07",
-  label: "In their words",
-  heading: "What clients say once the dust has settled.",
+  label: "Soluciones",
+  heading: "Soluciones.",
+  tagline: "Diseñamos estrategias para cada etapa de tu negocio.",
+  taglineSecondary: "¿Cuál es tu momento?",
 };
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Elena Marchetti",
-    role: "Client — Casa Umbral",
+    name: "",
+    role: "ABRIR UN NEGOCIO",
     quote:
-      "We interviewed five studios, and CRDN was the only one that asked more questions than it answered. Over eighteen months they treated our budget with the same respect as their details — every peso had to earn its place, and every decision was explained until we understood it. The house they delivered is calmer than anything we knew to ask for: rooms that hold the morning light, storage that disappears, a stair our children treat as furniture. Two years on, guests still lower their voices when they walk in. We didn't just get a house; we were taught how to see one.",
+      "Desarrollamos conceptos comerciales desde cero, integrando arquitectura, identidad de marca y experiencia del cliente para construir espacios listos para crecer.",
   },
   {
-    name: "Ricardo Peña",
-    role: "Development Director — Torre Alba",
+    name: "",
+    role: "REMODELAR UN ESPACIO",
     quote:
-      "Torre Alba leased ahead of every projection we modelled. CRDN understood that a commercial building succeeds twice — once on the balance sheet and once on the street — and refused to sacrifice either.",
+      "Replanteamos la distribución, la imagen y el funcionamiento de tu negocio para responder a nuevas necesidades y mejorar la experiencia de quienes lo visitan.",
   },
   {
-    name: "Sofía & Daniel Herrera",
-    role: "Clients — Loft Norte 42",
+    name: "",
+    role: "OPTIMIZAR EL DESEMPEÑO COMERCIAL",
     quote:
-      "They rebuilt our loft around the way we actually live, not the way apartments are supposed to look. A year later we have found nothing we would change — which, for us, is the entire review.",
+      "Analizamos cómo las personas recorren e interactúan con tu espacio para identificar oportunidades de mejora en la circulación, exhibición y operación.",
   },
 ];
 

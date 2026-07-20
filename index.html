@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/site.css" />
+  <link rel="stylesheet" href="assets/site.css?v=3" />
 </head>
 <body>
   <a class="skip-link" href="#content">Saltar al contenido</a>
@@ -24,17 +24,16 @@
   <header class="header">
     <div class="shell header__inner">
       <a class="brand" href="#home" aria-label="CRDN — inicio">
-        <img class="brand__logo" src="public/images/logo.jpeg" alt="" />
-        <span class="brand__word">CRDN</span>
+        <img class="brand__logo" src="public/images/logo.jpeg" alt="CRDN" />
       </a>
 
       <nav class="nav" aria-label="Principal">
         <ul class="nav__list">
           <li><a class="nav__link is-active" data-spy="home" href="#home">Inicio</a></li>
           <li><a class="nav__link" data-spy="about" href="#about">Estudio</a></li>
-          <li><a class="nav__link" data-spy="insights" href="#insights">Insights</a></li>
+          <li><a class="nav__link" data-spy="solutions" href="#solutions">Soluciones</a></li>
           <li><a class="nav__link" data-spy="projects" href="#projects">Proyectos</a></li>
-          <li><a class="nav__link" data-spy="process" href="#process">Proceso</a></li>
+          <li><a class="nav__link" data-spy="insights" href="#insights">Insights</a></li>
           <li><a class="nav__link" data-spy="contact" href="#contact">Contacto</a></li>
         </ul>
       </nav>
@@ -74,7 +73,7 @@
       <div class="shell hero__inner">
         <div class="hero__meta">
           <p class="eyebrow">CRDN — retail, brand &amp; commercial design</p>
-          <p class="eyebrow eyebrow--est">Est. 2009 · México</p>
+          <p class="eyebrow eyebrow--est">León. Guanajuato · México</p>
         </div>
         <span class="hero__rule" aria-hidden="true"></span>
 
@@ -109,14 +108,14 @@
             </div>
             <figcaption class="plate__caption">
               <!-- PLACEHOLDER CAPTION -->
-              <span class="eyebrow">Plate 01 — Proyecto de retail (reemplazar descripción)</span>
+              <span class="eyebrow"></span>
             </figcaption>
           </figure>
         </div>
 
         <div class="hero__foot reveal" data-delay="3">
-          <p class="eyebrow">19.4194° N — 99.1602° W</p>
-          <p class="eyebrow eyebrow--mid">§ 01 — Práctica</p>
+          <p class="eyebrow">CRDN</p>
+          <p class="eyebrow eyebrow--mid">§ 01</p>
           <a class="hero__scroll" href="#about" aria-label="Bajar a la sección de estudio">
             <span class="eyebrow">Explorar</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
@@ -195,82 +194,45 @@
       </div>
     </section>
 
-    <!-- ============================ INSIGHTS (blog preview) ============================ -->
-    <section class="section" id="insights">
+    <!-- ============================ SOLUCIONES ============================ -->
+    <section class="section" id="solutions">
       <div class="shell">
         <div class="reveal">
-          <div class="section-head__rule">
+          <div class="section-head__rule section-head__rule--centered">
             <span class="eyebrow">§ 03</span>
             <span class="line" aria-hidden="true"></span>
-            <span class="eyebrow">Insights</span>
+            <span class="eyebrow">Soluciones</span>
           </div>
-          <h2 class="section-head__title">Ideas sobre espacio, marca y comercio.</h2>
-          <p class="section-head__tagline">Nuestro journal editorial sobre diseño comercial, retail y la relación entre arquitectura y negocio.</p>
+          <h2 class="section-head__title section-head__title--centered">Soluciones.</h2>
+          <p class="section-head__tagline section-head__tagline--centered">Diseñamos estrategias para cada etapa de tu negocio</p>
+          <p class="section-head__tagline section-head__tagline--centered">¿Cuál es tu momento?</p>
         </div>
 
-        <!-- Each card is a placeholder blog preview. Replace image, title, date,
-             excerpt and the href="#" with the real article page later. -->
         <div class="card-grid card-grid--3">
 
-          <article class="article-card reveal" data-delay="0">
-            <div class="article-card__media">
-              <div class="img-ph"><span class="img-ph__label">Imagen del artículo</span></div>
+          <figure class="testi-card reveal" data-delay="0" style="margin:0;">
+            <figcaption class="solutions-card__title">ABRIR UN NEGOCIO</figcaption>
+            <blockquote class="testi-card__quote">Desarrollamos conceptos comerciales desde cero, integrando arquitectura, identidad de marca y experiencia del cliente para construir espacios listos para crecer.</blockquote>
+            <div class="testi-card__foot">
+              <p class="testi-card__name"></p>
             </div>
-            <div class="article-card__meta">
-              <span class="eyebrow">Artículo</span>
-              <span class="eyebrow">Marzo 2026</span>
-            </div>
-            <h3 class="article-card__title">El recorrido del cliente empieza en la vitrina.</h3>
-            <p class="article-card__excerpt">
-              Cómo el trazo de una tienda —flujo, jerarquía y puntos de pausa— guía la decisión
-              de compra mucho antes de que el cliente toque el producto.
-            </p>
-            <!-- PLACEHOLDER LINK: replace # with the real article URL -->
-            <a class="article-card__cta" href="https://www.paramountplus.com/home/">
-              Leer artículo
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </article>
+          </figure>
 
-          <article class="article-card reveal" data-delay="1">
-            <div class="article-card__media">
-              <div class="img-ph"><span class="img-ph__label">Imagen del artículo</span></div>
+          <figure class="testi-card reveal" data-delay="1" style="margin:0;">
+            <figcaption class="solutions-card__title">REMODELAR UN ESPACIO</figcaption>
+            <blockquote class="testi-card__quote">Replanteamos la distribución, la imagen y el funcionamiento de tu negocio para responder a nuevas necesidades y mejorar la experiencia de quienes lo visitan.</blockquote>
+            <div class="testi-card__foot">
+              <p class="testi-card__name"></p>
             </div>
-            <div class="article-card__meta">
-              <span class="eyebrow">Artículo</span>
-              <span class="eyebrow">Febrero 2026</span>
-            </div>
-            <h3 class="article-card__title">Luz, material y deseo: la psicología del retail.</h3>
-            <p class="article-card__excerpt">
-              La temperatura de la luz y la textura de una superficie no son detalles estéticos:
-              son señales que el cliente lee sin darse cuenta.
-            </p>
-            <!-- PLACEHOLDER LINK: replace # with the real article URL -->
-            <a class="article-card__cta" href="#">
-              Leer artículo
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </article>
+          </figure>
 
-          <article class="article-card reveal" data-delay="2">
-            <div class="article-card__media">
-              <div class="img-ph"><span class="img-ph__label">Imagen del artículo</span></div>
+          <figure class="testi-card reveal" data-delay="2" style="margin:0;">
+            <figcaption class="solutions-card__title">OPTIMIZAR EL DESEMPEÑO COMERCIAL</figcaption>
+            <blockquote class="testi-card__quote">Analizamos cómo las personas recorren e interactúan con tu espacio para identificar oportunidades de mejora en la circulación, exhibición y operación.</blockquote>
+            <div class="testi-card__foot">
+              <p class="testi-card__name"></p>
             </div>
-            <div class="article-card__meta">
-              <span class="eyebrow">Artículo</span>
-              <span class="eyebrow">Enero 2026</span>
-            </div>
-            <h3 class="article-card__title">Del plano a la marca: diseñar para vender.</h3>
-            <p class="article-card__excerpt">
-              Un espacio comercial no termina en el render. Contamos cómo traducimos la estrategia
-              de una marca en decisiones constructivas concretas.
-            </p>
-            <!-- PLACEHOLDER LINK: replace # with the real article URL -->
-            <a class="article-card__cta" href="#">
-              Leer artículo
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </article>
+          </figure>
 
         </div>
       </div>
@@ -285,8 +247,9 @@
             <span class="line" aria-hidden="true"></span>
             <span class="eyebrow">Proyectos</span>
           </div>
-          <h2 class="section-head__title">Espacios que trabajan para la marca.</h2>
-          <p class="section-head__tagline">Una selección de proyectos de retail y diseño comercial. Explora el portafolio completo en la página de proyectos.</p>
+          <h2 class="section-head__title">Resultados que hablan por sí solos.</h2>
+          <p class="section-head__tagline">Casos de éxito que demuestran el impacto de nuestra metodología en el diseño comercial 
+            y en la conducta de los clientes dentro del espacio.</p>
         </div>
 
         <!-- Preview cards. Replace titles/summaries/images and confirm the links
@@ -298,11 +261,11 @@
               <img src="public/images/case1-hd.png" alt="Tienda de calzado diseñada por CRDN" />
             </div>
             <div class="project-card__head">
-              <h3 class="project-card__title">Tienda de Calzado</h3>
+              <h3 class="project-card__title">Concepto TERRA</h3>
               <span class="project-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
             </div>
-            <p class="project-card__meta"><span class="eyebrow">Retail · 2024</span><span class="eyebrow">Calzado</span></p>
-            <p class="project-card__summary">Renovación integral de retail con foco en flujo, exhibición y experiencia de compra.</p>
+            <p class="project-card__meta"><span class="eyebrow">Retail · 2014 - 2024</span><span class="eyebrow">Calzado</span></p>
+            <p class="project-card__summary">Concepto de tienda que se convitió en un estándar de marca por casi una década.</p>
           </a>
 
           <a class="project-card reveal" data-delay="1" href="projects.html#proyecto-2">
@@ -310,11 +273,11 @@
               <img src="public/images/case2-hd.png" alt="Boutique premium diseñada por CRDN" />
             </div>
             <div class="project-card__head">
-              <h3 class="project-card__title">Boutique Premium</h3>
+              <h3 class="project-card__title">Interiorismo y Visual Merchandising</h3>
               <span class="project-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
             </div>
-            <p class="project-card__meta"><span class="eyebrow">Retail · 2023</span><span class="eyebrow">Moda</span></p>
-            <p class="project-card__summary">Interiorismo de boutique con materiales cálidos e iluminación de realce.</p>
+            <p class="project-card__meta"><span class="eyebrow">Retail · 2025</span><span class="eyebrow">Moda</span></p>
+            <p class="project-card__summary">Proyecto que logró una experiencia de compra mas clara, permitiendo exhibir un mayor volumen de producto de manera estratégica.</p>
           </a>
 
           <a class="project-card reveal" data-delay="2" href="projects.html#proyecto-3">
@@ -325,8 +288,8 @@
               <h3 class="project-card__title">Módulo Comercial</h3>
               <span class="project-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
             </div>
-            <p class="project-card__meta"><span class="eyebrow">Comercial · 2022</span><span class="eyebrow">Activación</span></p>
-            <p class="project-card__summary">Diseño de un módulo de retail desmontable para activaciones de marca.</p>
+            <p class="project-card__meta"><span class="eyebrow">Comercial · 2023</span><span class="eyebrow">Activación</span></p>
+            <p class="project-card__summary">Una solución modular para punto de encuentro para clientes y activaciones de marca en espacios temporales.</p>
           </a>
 
         </div>
@@ -439,45 +402,82 @@
       </div>
     </section>
 
-    <!-- ============================ TESTIMONIALS ============================ -->
-    <section class="section" id="testimonials">
+    <!-- ============================ INSIGHTS (blog preview) ============================ -->
+    <section class="section" id="insights">
       <div class="shell">
         <div class="reveal">
           <div class="section-head__rule">
             <span class="eyebrow">§ 06</span>
             <span class="line" aria-hidden="true"></span>
-            <span class="eyebrow">Testimonios</span>
+            <span class="eyebrow">Insights</span>
           </div>
-          <h2 class="section-head__title">Lo que dicen nuestros clientes.</h2>
+          <h2 class="section-head__title">Ideas sobre espacio, marca y comercio.</h2>
+          <p class="section-head__tagline">Nuestro journal editorial sobre diseño comercial, retail y la relación entre arquitectura y negocio.</p>
         </div>
 
-        <!-- PLACEHOLDER testimonials — replace names, roles and quotes with real ones. -->
+        <!-- Each card is a placeholder blog preview. Replace image, title, date,
+             excerpt and the href="#" with the real article page later. -->
         <div class="card-grid card-grid--3">
 
-          <figure class="testi-card reveal" data-delay="0" style="margin:0;">
-            <figcaption class="eyebrow">Cliente — Cadena de calzado</figcaption>
-            <blockquote class="testi-card__quote">“Entendieron el negocio antes de proponer una sola idea. Rediseñaron nuestras tiendas cuidando cada peso invertido y explicando cada decisión hasta que la comprendimos. El resultado fue inmediato: los clientes recorren más, se quedan más tiempo y las ventas por metro cuadrado subieron. No contratamos un despacho de diseño; ganamos un socio estratégico que piensa como nosotros.”</blockquote>
-            <div class="testi-card__foot">
-              <p class="testi-card__name">Nombre del Cliente</p>
-              <button class="testi-card__more" type="button" data-modal-target="testi-modal-1" aria-haspopup="dialog">Leer más</button>
+          <article class="article-card reveal" data-delay="0">
+            <div class="article-card__media">
+              <div class="img-ph"><span class="img-ph__label">Imagen del artículo</span></div>
             </div>
-          </figure>
+            <div class="article-card__meta">
+              <span class="eyebrow">Artículo</span>
+              <span class="eyebrow">Marzo 2026</span>
+            </div>
+            <h3 class="article-card__title">El recorrido del cliente empieza en la vitrina.</h3>
+            <p class="article-card__excerpt">
+              Cómo el trazo de una tienda —flujo, jerarquía y puntos de pausa— guía la decisión
+              de compra mucho antes de que el cliente toque el producto.
+            </p>
+            <!-- PLACEHOLDER LINK: replace # with the real article URL -->
+            <a class="article-card__cta" href="https://www.paramountplus.com/home/">
+              Leer artículo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
 
-          <figure class="testi-card reveal" data-delay="1" style="margin:0;">
-            <figcaption class="eyebrow">Cliente — Boutique de moda</figcaption>
-            <blockquote class="testi-card__quote">“Convirtieron un local complicado en nuestra mejor tienda. Cada detalle —la luz, los materiales, el recorrido— tiene una razón comercial, no solo estética.”</blockquote>
-            <div class="testi-card__foot">
-              <p class="testi-card__name">Nombre del Cliente</p>
+          <article class="article-card reveal" data-delay="1">
+            <div class="article-card__media">
+              <div class="img-ph"><span class="img-ph__label">Imagen del artículo</span></div>
             </div>
-          </figure>
+            <div class="article-card__meta">
+              <span class="eyebrow">Artículo</span>
+              <span class="eyebrow">Febrero 2026</span>
+            </div>
+            <h3 class="article-card__title">Luz, material y deseo: la psicología del retail.</h3>
+            <p class="article-card__excerpt">
+              La temperatura de la luz y la textura de una superficie no son detalles estéticos:
+              son señales que el cliente lee sin darse cuenta.
+            </p>
+            <!-- PLACEHOLDER LINK: replace # with the real article URL -->
+            <a class="article-card__cta" href="#">
+              Leer artículo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
 
-          <figure class="testi-card reveal" data-delay="2" style="margin:0;">
-            <figcaption class="eyebrow">Cliente — Retail comercial</figcaption>
-            <blockquote class="testi-card__quote">“Cumplieron tiempos, presupuesto y una calidad de ejecución que rara vez encuentras. Un año después, no cambiaríamos nada.”</blockquote>
-            <div class="testi-card__foot">
-              <p class="testi-card__name">Nombre del Cliente</p>
+          <article class="article-card reveal" data-delay="2">
+            <div class="article-card__media">
+              <div class="img-ph"><span class="img-ph__label">Imagen del artículo</span></div>
             </div>
-          </figure>
+            <div class="article-card__meta">
+              <span class="eyebrow">Artículo</span>
+              <span class="eyebrow">Enero 2026</span>
+            </div>
+            <h3 class="article-card__title">Del plano a la marca: diseñar para vender.</h3>
+            <p class="article-card__excerpt">
+              Un espacio comercial no termina en el render. Contamos cómo traducimos la estrategia
+              de una marca en decisiones constructivas concretas.
+            </p>
+            <!-- PLACEHOLDER LINK: replace # with the real article URL -->
+            <a class="article-card__cta" href="#">
+              Leer artículo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
 
         </div>
       </div>
@@ -590,18 +590,6 @@
     </div>
   </footer>
 
-  <!-- Testimonial modal (long quote) -->
-  <div class="modal" id="testi-modal-1" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Testimonio completo">
-    <div class="modal__panel">
-      <button class="modal__close" type="button" data-modal-close aria-label="Cerrar">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-      </button>
-      <p class="eyebrow">Cliente — Cadena de calzado</p>
-      <blockquote class="quote">“Entendieron el negocio antes de proponer una sola idea. Rediseñaron nuestras tiendas cuidando cada peso invertido y explicando cada decisión hasta que la comprendimos. El resultado fue inmediato: los clientes recorren más, se quedan más tiempo y las ventas por metro cuadrado subieron. No contratamos un despacho de diseño; ganamos un socio estratégico que piensa como nosotros.”</blockquote>
-      <p class="attr">Nombre del Cliente</p>
-    </div>
-  </div>
-
-  <script src="assets/site.js"></script>
+  <script src="assets/site.js?v=2"></script>
 </body>
 </html>

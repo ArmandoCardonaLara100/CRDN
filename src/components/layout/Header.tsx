@@ -132,7 +132,7 @@ export function Header() {
             href="#contact"
             className="hidden h-10 items-center rounded-[2px] bg-ink px-5 font-sans text-[12px] tracking-[0.08em] text-bone transition-all duration-300 ease-studio hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-10px_rgba(0,0,0,0.4)] md:inline-flex"
           >
-            Start a project
+            Iniciar Proyecto
           </a>
           <button
             type="button"
