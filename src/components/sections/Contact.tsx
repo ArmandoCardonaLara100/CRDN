@@ -67,7 +67,7 @@ export function Contact() {
 
         <Reveal delay={0.2}>
           <p className="eyebrow mt-20 border-t border-ink/15 pt-6 text-umber lg:mt-28">
-            {studio.address} — visits by appointment
+            {studio.address} — visitas con cita previa
           </p>
         </Reveal>
       </div>

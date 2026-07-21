@@ -53,7 +53,7 @@ export const studio = {
   founded: "2009",
   city: "Mexico City",
   coordinates: "19.4194° N — 99.1602° W",
-  address: "Orizaba 42, Roma Norte, Mexico City",
+  address: "León, Guanajuato, México",
   email: "comercial@crdnarquitectura.com",
   phone: "477 408 80 56",
   phoneHref: "tel:+524774088056",
@@ -567,6 +567,6 @@ export const contactSection = {
 };
 
 export const footer = {
-  note: "Architecture of quiet permanence — drawn, detailed and built from Mexico City since 2009.",
+  note: "Retail, brand & commercial design — diseñamos espacios que trabajan para tu marca desde León, Guanajuato, México.",
   copyright: `© ${new Date().getFullYear()} CRDN Studio. All rights reserved.`,
 };
