@@ -71,12 +71,6 @@ export default function RootLayout({
       className={`${instrumentSans.variable} ${instrumentSerif.variable} ${plexMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
-        <a
-          href="#content"
-          className="eyebrow fixed left-6 top-6 z-[200] -translate-y-24 bg-ink px-5 py-3 text-bone transition-transform focus-visible:translate-y-0"
-        >
-          Skip to content
-        </a>
         {children}
       </body>
     </html>

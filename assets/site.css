@@ -62,23 +62,6 @@ em { font-style: italic; }
 
 :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 
-/* ---- Skip link ---------------------------------------------------------- */
-.skip-link {
-  position: fixed;
-  left: 1.5rem; top: 1.5rem;
-  z-index: 200;
-  transform: translateY(-150%);
-  background: var(--ink);
-  color: var(--bone);
-  padding: 0.75rem 1.25rem;
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-  transition: transform 0.3s var(--ease);
-}
-.skip-link:focus { transform: translateY(0); }
-
 /* ---- Layout ------------------------------------------------------------- */
 .shell {
   margin-inline: auto;
