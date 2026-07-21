@@ -563,13 +563,6 @@ export const contactSection = {
       href: studio.instagramHref,
       external: true,
     },
-    {
-      key: "location",
-      label: "Studio",
-      value: "Roma Norte, CDMX",
-      href: studio.mapsHref,
-      external: true,
-    },
   ],
 };
 

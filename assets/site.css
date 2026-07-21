@@ -769,12 +769,13 @@ em { font-style: italic; }
 .contact__support { margin-top: 2rem; max-width: 32rem; font-size: 15px; line-height: 1.7; color: var(--umber); }
 .contact__grid {
   margin-top: clamp(3.5rem, 6vw, 6rem);
+  margin-inline: auto;
+  max-width: 64rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3.5rem 1.5rem;
+  gap: 3.5rem 2rem;
 }
-@media (min-width: 40rem) { .contact__grid { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 64rem) { .contact__grid { grid-template-columns: repeat(5, 1fr); } }
+@media (min-width: 48rem) { .contact__grid { grid-template-columns: repeat(4, 1fr); gap-inline: 3rem; } }
 .contact__item { display: flex; flex-direction: column; align-items: center; gap: 1.25rem; text-align: center; }
 .contact__icon {
   display: flex;

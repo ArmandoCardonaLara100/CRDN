@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Mail, MessageCircle, Phone } from "lucide-react";
 import { contactSection, studio } from "@/lib/content";
 import { InstagramIcon } from "@/components/ui/BrandIcon";
 import { Reveal } from "@/components/ui/Reveal";
@@ -17,8 +17,6 @@ function ChannelIcon({ channel }: { channel: string }) {
       return <MessageCircle {...common} />;
     case "instagram":
       return <InstagramIcon size={22} />;
-    case "location":
-      return <MapPin {...common} />;
     default:
       return null;
   }
@@ -40,7 +38,7 @@ export function Contact() {
           </p>
         </Reveal>
 
-        <ul className="mt-16 grid grid-cols-2 gap-x-6 gap-y-14 sm:grid-cols-3 lg:mt-24 lg:grid-cols-5">
+        <ul className="mx-auto mt-16 grid max-w-5xl grid-cols-2 gap-x-8 gap-y-14 md:grid-cols-4 lg:mt-24 lg:gap-x-12">
           {contactSection.channels.map((channel, i) => (
             <Reveal key={channel.key} delay={i * 0.07}>
               <li>
