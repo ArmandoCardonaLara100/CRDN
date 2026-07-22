@@ -121,14 +121,6 @@ export const about = {
   ],
 };
 
-export interface Article {
-  key: string;
-  date: string;
-  title: string;
-  excerpt: string;
-  href: string;
-}
-
 export const insightsSection = {
   index: "03",
   label: "Insights",
@@ -136,33 +128,6 @@ export const insightsSection = {
   tagline:
     "Nuestro journal editorial sobre diseño comercial, retail y la relación entre arquitectura y negocio.",
 };
-
-export const insights: Article[] = [
-  {
-    key: "vitrina",
-    date: "Marzo 2026",
-    title: "El recorrido del cliente empieza en la vitrina.",
-    excerpt:
-      "Cómo el trazo de una tienda —flujo, jerarquía y puntos de pausa— guía la decisión de compra mucho antes de que el cliente toque el producto.",
-    href: "#",
-  },
-  {
-    key: "luz-material",
-    date: "Febrero 2026",
-    title: "Luz, material y deseo: la psicología del retail.",
-    excerpt:
-      "La temperatura de la luz y la textura de una superficie no son detalles estéticos: son señales que el cliente lee sin darse cuenta.",
-    href: "#",
-  },
-  {
-    key: "plano-marca",
-    date: "Enero 2026",
-    title: "Del plano a la marca: diseñar para vender.",
-    excerpt:
-      "Un espacio comercial no termina en el render. Contamos cómo traducimos la estrategia de una marca en decisiones constructivas concretas.",
-    href: "#",
-  },
-];
 
 export const projectsSection = {
   index: "04",

@@ -4,6 +4,7 @@ import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { nav, studio } from "@/lib/content";
 import { EASE } from "@/lib/motion";
 
@@ -44,6 +45,9 @@ function useActiveSection(): string {
 }
 
 export function Header() {
+  const pathname = usePathname();
+  const onLandingPage = pathname === "/";
+  const onInsightsPage = pathname.startsWith("/insights");
   const scrolled = useScrolled();
   const active = useActiveSection();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -88,7 +92,7 @@ export function Header() {
         }`}
       >
         <a
-          href="#home"
+          href={onLandingPage ? "#home" : "/#home"}
           className="flex items-center gap-2.5 font-sans text-[15px] font-semibold tracking-[0.32em]"
           aria-label="CRDN — back to top"
           onClick={() => setMenuOpen(false)}
@@ -108,15 +112,21 @@ export function Header() {
             {nav.map((item) => (
               <li key={item.id}>
                 <a
-                  href={item.href}
-                  aria-current={active === item.id ? "true" : undefined}
+                  href={onLandingPage ? item.href : `/${item.href}`}
+                  aria-current={
+                    (onLandingPage && active === item.id) ||
+                    (onInsightsPage && item.id === "insights")
+                      ? "page"
+                      : undefined
+                  }
                   className="group relative py-2 font-sans text-[11px] uppercase tracking-[0.22em] text-ink/70 transition-colors duration-300 hover:text-ink aria-[current]:text-ink"
                 >
                   {item.label}
                   <span
                     aria-hidden="true"
                     className={`absolute -bottom-0.5 left-0 h-px w-full origin-left bg-ink transition-transform duration-300 ease-studio ${
-                      active === item.id
+                      (onLandingPage && active === item.id) ||
+                      (onInsightsPage && item.id === "insights")
                         ? "scale-x-100"
                         : "scale-x-0 group-hover:scale-x-100"
                     }`}
@@ -129,7 +139,7 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <a
-            href="#contact"
+            href={onLandingPage ? "#contact" : "/#contact"}
             className="hidden h-10 items-center rounded-[2px] bg-ink px-5 font-sans text-[12px] tracking-[0.08em] text-bone transition-all duration-300 ease-studio hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-10px_rgba(0,0,0,0.4)] md:inline-flex"
           >
             Iniciar Proyecto
@@ -176,7 +186,7 @@ export function Header() {
                     className="border-b border-ink/10"
                   >
                     <a
-                      href={item.href}
+                      href={onLandingPage ? item.href : `/${item.href}`}
                       onClick={() => setMenuOpen(false)}
                       className="flex items-baseline gap-6 py-5"
                     >

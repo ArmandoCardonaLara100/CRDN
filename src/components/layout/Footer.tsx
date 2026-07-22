@@ -1,11 +1,14 @@
 "use client";
 
 import { ArrowUp } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { footer, nav, studio } from "@/lib/content";
 import { InstagramIcon, LinkedinIcon } from "@/components/ui/BrandIcon";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function Footer() {
+  const pathname = usePathname();
+  const onLandingPage = pathname === "/";
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -34,7 +37,7 @@ export function Footer() {
                   {nav.map((item) => (
                     <li key={item.id}>
                       <a
-                        href={item.href}
+                        href={onLandingPage ? item.href : `/${item.href}`}
                         className="text-sm text-bone/80 transition-colors duration-300 hover:text-bone"
                       >
                         {item.label}

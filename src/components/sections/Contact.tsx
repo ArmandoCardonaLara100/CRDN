@@ -40,7 +40,7 @@ export function Contact() {
 
         <ul className="mx-auto mt-16 grid max-w-5xl grid-cols-2 gap-x-8 gap-y-14 md:grid-cols-4 lg:mt-24 lg:gap-x-12">
           {contactSection.channels.map((channel, i) => (
-            <Reveal key={channel.key} delay={i * 0.07}>
+            <Reveal key={channel.key} delay={i * 0.07} className="min-w-0">
               <li>
                 <a
                   href={channel.href}
@@ -53,11 +53,11 @@ export function Contact() {
                   <span className="flex size-20 items-center justify-center rounded-full border border-ink/25 bg-sand transition-all duration-400 ease-studio group-hover:-translate-y-1.5 group-hover:border-ink group-hover:bg-ink group-hover:text-bone group-hover:shadow-[0_18px_36px_-18px_rgba(0,0,0,0.45)]">
                     <ChannelIcon channel={channel.key} />
                   </span>
-                  <span>
+                  <span className="min-w-0 max-w-full">
                     <span className="eyebrow block text-umber transition-colors duration-300 group-hover:text-ink">
                       {channel.label}
                     </span>
-                    <span className="mt-2 block text-sm">{channel.value}</span>
+                    <span className="mt-2 block max-w-full break-words text-sm">{channel.value}</span>
                   </span>
                 </a>
               </li>

@@ -556,6 +556,7 @@ em { font-style: italic; }
 .article-card__media .img-ph {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
+  object-fit: cover;
   transition: transform 0.7s var(--ease);
 }
 .article-card:hover .article-card__media img { transform: scale(1.04); }
@@ -988,6 +989,95 @@ em { font-style: italic; }
 }
 @media (min-width: 40rem) { .project__gallery { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 64rem) { .project__gallery { grid-template-columns: repeat(3, 1fr); } }
+
+/* ---- Insights index + editorial article pages -------------------------- */
+.insights-index__intro { margin-top: 1.5rem; max-width: 42rem; color: var(--umber); line-height: 1.75; }
+.insights-index__grid { margin-top: clamp(3.5rem, 7vw, 6rem); }
+
+.insight-article { padding-top: var(--header-h); }
+.insight-article__head { padding-block: clamp(4rem, 10vw, 8rem) clamp(3rem, 7vw, 6rem); }
+.insight-article__back {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  color: var(--umber); transition: color 0.3s;
+}
+.insight-article__back:hover { color: var(--ink); }
+.insight-article__back svg { width: 14px; height: 14px; }
+.insight-article__meta { margin-top: 3rem; display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; }
+.insight-article__title {
+  margin-top: 1.5rem;
+  max-width: 74rem;
+  font-size: clamp(3rem, 8vw, 6.8rem);
+  line-height: 0.94;
+  letter-spacing: -0.025em;
+}
+.insight-article__deck {
+  margin-top: 2rem;
+  max-width: 50rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 3vw, 2.15rem);
+  font-style: italic;
+  line-height: 1.3;
+  color: var(--umber);
+}
+.insight-article__feature {
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--plaster);
+}
+.insight-article__feature img { width: 100%; height: auto; }
+.insight-article__content { padding-block: clamp(4rem, 9vw, 8rem); }
+.insight-prose { margin-inline: auto; max-width: 48rem; }
+.insight-prose h2 {
+  margin-top: clamp(3.5rem, 7vw, 5rem);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.05;
+}
+.insight-prose h3 {
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(1.6rem, 4vw, 2.25rem);
+  line-height: 1.15;
+}
+.insight-prose p { margin-top: 1.25rem; font-size: 17px; line-height: 1.85; color: rgba(0, 0, 0, 0.8); }
+.insight-prose p.is-emphasis { font-weight: 600; color: var(--ink); }
+.insight-prose ul {
+  margin: 1.5rem 0 0;
+  padding-left: 1.5rem;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  list-style: none;
+}
+.insight-prose li { position: relative; margin-top: 0.75rem; font-size: 17px; line-height: 1.7; color: rgba(0, 0, 0, 0.8); }
+.insight-prose li::before { content: "—"; position: absolute; left: -1.5rem; }
+.insight-callout {
+  margin-block: clamp(4rem, 8vw, 6rem);
+  border-block: 1px solid rgba(0, 0, 0, 0.15);
+  background: rgba(244, 223, 200, 0.45);
+  padding: clamp(2rem, 5vw, 3.5rem);
+}
+.insight-callout h2 { margin-top: 0; font-size: clamp(1.8rem, 4vw, 2.65rem); line-height: 1.15; }
+.insight-callout p { font-weight: 500; }
+.insight-gallery {
+  margin-block: clamp(4rem, 9vw, 7rem);
+  display: grid;
+  gap: 1.25rem;
+}
+.insight-gallery figure { margin: 0; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.1); background: var(--plaster); }
+.insight-gallery img { width: 100%; height: auto; }
+@media (min-width: 64rem) {
+  .insight-gallery { margin-inline: -12rem; }
+}
+.insight-nav { border-block: 1px solid rgba(0, 0, 0, 0.15); background: var(--plaster); }
+.insight-nav__grid { display: grid; }
+.insight-nav__link { display: block; padding-block: 2.5rem; }
+.insight-nav__link + .insight-nav__link { border-top: 1px solid rgba(0, 0, 0, 0.15); }
+.insight-nav__label { display: flex; align-items: center; gap: 0.5rem; }
+.insight-nav__label svg { width: 13px; height: 13px; }
+.insight-nav__title { margin-top: 1rem; display: block; font-family: var(--font-display); font-size: 1.5rem; line-height: 1.2; }
+@media (min-width: 48rem) {
+  .insight-nav__grid { grid-template-columns: repeat(2, 1fr); }
+  .insight-nav__link:first-child { border-right: 1px solid rgba(0, 0, 0, 0.15); padding-right: 2.5rem; }
+  .insight-nav__link + .insight-nav__link { border-top: 0; padding-left: 2.5rem; text-align: right; }
+  .insight-nav__link + .insight-nav__link .insight-nav__label { justify-content: flex-end; }
+}
 .gallery-item { cursor: zoom-in; }
 .back-link {
   display: inline-flex;
