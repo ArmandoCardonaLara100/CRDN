@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUp } from "lucide-react";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { footer, nav, studio } from "@/lib/content";
 import { InstagramIcon, LinkedinIcon } from "@/components/ui/BrandIcon";
@@ -19,12 +20,14 @@ export function Footer() {
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-10 border-b border-bone/15 pb-14">
             <div>
-              <p
-                className="font-display text-[clamp(3.5rem,9vw,7.5rem)] leading-none tracking-[0.08em]"
-                aria-hidden="true"
-              >
-                CRDN
-              </p>
+              <Image
+                src="/images/crdn-wordmark-cropped.png"
+                alt="CRDN"
+                width={1050}
+                height={300}
+                sizes="(max-width: 767px) 176px, (max-width: 1023px) 224px, 256px"
+                className="h-auto w-44 invert sm:w-56 lg:w-64"
+              />
               <p className="mt-6 max-w-md text-sm leading-relaxed text-bone/60">
                 {footer.note}
               </p>

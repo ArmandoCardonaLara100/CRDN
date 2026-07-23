@@ -4,6 +4,7 @@ import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { nav, studio } from "@/lib/content";
 import { EASE } from "@/lib/motion";
@@ -93,14 +94,17 @@ export function Header() {
       >
         <a
           href={onLandingPage ? "#home" : "/#home"}
-          className="flex items-center gap-2.5 font-sans text-[15px] font-semibold tracking-[0.32em]"
+          className="block"
           aria-label="CRDN — back to top"
           onClick={() => setMenuOpen(false)}
         >
-          CRDN
-          <span
-            className="mb-1 inline-block size-1.5 border border-ink/50 bg-sand"
-            aria-hidden="true"
+          <Image
+            src="/images/crdn-wordmark-cropped.png"
+            alt="CRDN"
+            width={1050}
+            height={300}
+            sizes="(max-width: 767px) 92px, 116px"
+            className="h-auto w-[5.75rem] sm:w-[7.25rem]"
           />
         </a>
 

@@ -28,14 +28,14 @@ function head(title, description) {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/site.css?v=4" />
+  <link rel="stylesheet" href="assets/site.css?v=5" />
 </head>`;
 }
 
 function header() {
   return `<header class="header is-scrolled">
   <div class="shell header__inner">
-    <a class="brand" href="index.html#home" aria-label="CRDN — inicio"><img class="brand__logo" src="public/images/logo.jpeg" alt="CRDN" /></a>
+    <a class="brand" href="index.html#home" aria-label="CRDN — inicio"><img class="brand__logo" src="public/images/crdn-wordmark-cropped.png" alt="CRDN" /></a>
     <nav class="nav" aria-label="Principal"><ul class="nav__list">
       <li><a class="nav__link" href="index.html#home">Inicio</a></li><li><a class="nav__link" href="index.html#about">Estudio</a></li><li><a class="nav__link" href="index.html#solutions">Soluciones</a></li><li><a class="nav__link" href="projects.html">Proyectos</a></li><li><a class="nav__link is-active" href="insights.html">Insights</a></li><li><a class="nav__link" href="index.html#contact">Contacto</a></li>
     </ul></nav>
@@ -49,7 +49,7 @@ function header() {
 
 function footer() {
   return `<footer class="footer"><div class="shell footer__inner">
-  <p class="footer__word" aria-hidden="true">CRDN</p><p class="footer__note">Retail, brand &amp; commercial design — diseñamos espacios que trabajan para tu marca desde León, Guanajuato, México.</p>
+  <img class="footer__logo" src="public/images/crdn-wordmark-cropped.png" alt="CRDN" /><p class="footer__note">Retail, brand &amp; commercial design — diseñamos espacios que trabajan para tu marca desde León, Guanajuato, México.</p>
   <ul class="footer__nav"><li><a href="index.html#home">Inicio</a></li><li><a href="index.html#about">Estudio</a></li><li><a href="insights.html">Insights</a></li><li><a href="projects.html">Proyectos</a></li><li><a href="index.html#process">Proceso</a></li><li><a href="index.html#contact">Contacto</a></li></ul>
   <div class="footer__social">
     <a href="https://instagram.com/crdnarquitectura" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
