@@ -103,8 +103,8 @@ export function Header() {
             alt="CRDN"
             width={1050}
             height={300}
-            sizes="(max-width: 767px) 92px, 116px"
-            className="h-auto w-[5.75rem] sm:w-[7.25rem]"
+            sizes="(max-width: 767px) 104px, 132px"
+            className="h-auto w-[6.5rem] sm:w-[8.25rem]"
           />
         </a>
 
