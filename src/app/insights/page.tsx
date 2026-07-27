@@ -1,66 +1,22 @@
+/* eslint-disable @next/next/no-img-element -- Native images preserve the authoritative HTML rendering exactly. */
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import { Footer } from "@/components/layout/Footer";
-import { Header } from "@/components/layout/Header";
-import { MotionShell } from "@/components/layout/MotionShell";
-import { Reveal } from "@/components/ui/Reveal";
 import { insightArticles } from "@/lib/insights";
+import { ArrowRight } from "@/components/site/SiteChrome";
+import { SiteChrome } from "@/components/site/SiteChrome";
 
 export const metadata: Metadata = {
   title: "Insights",
   description: "Artículos de CRDN sobre arquitectura comercial, diseño de retail y visual merchandising.",
 };
 
-export default function InsightsIndexPage() {
-  return (
-    <MotionShell>
-      <Header />
-      <main id="content" className="pt-20">
-        <section className="shell py-16 md:py-24 lg:py-32">
-          <Reveal>
-            <Link href="/#insights" className="eyebrow inline-flex items-center gap-3 text-umber">
-              <ArrowLeft size={14} strokeWidth={1.5} aria-hidden="true" /> Volver al inicio
-            </Link>
-            <h1 className="mt-10 font-display text-[clamp(4rem,10vw,8rem)] leading-none">Insights</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-umber">
-              Ideas sobre espacio, marca y comercio: arquitectura comercial, retail y visual merchandising.
-            </p>
-          </Reveal>
+const BackArrow = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>;
 
-          <div className="mt-16 grid gap-12 md:grid-cols-3 lg:mt-24">
-            {insightArticles.map((article, index) => (
-              <Reveal key={article.slug} delay={index * 0.08} className="h-full">
-                <Link
-                  href={`/insights/${article.slug}`}
-                  className="group block h-full"
-                  aria-label={`Leer: ${article.title}`}
-                >
-                  <article className="flex h-full flex-col">
-                  <div className="relative aspect-[3/2] overflow-hidden border border-ink/10">
-                    <Image
-                      src={article.featuredImage}
-                      alt=""
-                      fill
-                      sizes="(max-width: 767px) 100vw, 33vw"
-                      className="object-cover transition-transform duration-700 ease-studio group-hover:scale-[1.04]"
-                    />
-                  </div>
-                  <p className="eyebrow mt-5 text-umber">{article.category} · {article.date}</p>
-                  <h2 className="mt-3 font-display text-[1.8rem] leading-tight">{article.title}</h2>
-                  <p className="mt-4 flex-1 text-sm leading-relaxed text-umber">{article.excerpt}</p>
-                  <span className="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em]">
-                    Leer artículo <ArrowRight size={13} strokeWidth={1.5} aria-hidden="true" />
-                  </span>
-                  </article>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </MotionShell>
-  );
+export default function InsightsIndexPage() {
+  return <SiteChrome kind="insights">
+    <main id="content" className="insights-index">
+      <section className="shell page-hero"><div className="reveal"><Link className="back-link" href="/#insights"><BackArrow />Volver al inicio</Link><h1 className="page-hero__title">Insights</h1><p className="insights-index__intro">Ideas sobre espacio, marca y comercio: arquitectura comercial, retail y visual merchandising.</p></div></section>
+      <section className="section shell" style={{ paddingTop: "clamp(2rem,4vw,3rem)" }}><div className="card-grid card-grid--3 insights-index__grid">{insightArticles.map((article, index) => <Link className="article-card reveal" data-delay={index} href={`/insights/${article.slug}`} key={article.slug}><div className="article-card__media"><img src={article.featuredImage} alt={article.images.find((image) => image.src === article.featuredImage)?.alt ?? ""} /></div><div className="article-card__meta"><span className="eyebrow">{article.category}</span><span className="eyebrow">{article.date}</span></div><h2 className="article-card__title">{article.title}</h2><p className="article-card__excerpt">{article.excerpt}</p><span className="article-card__cta">Leer artículo <ArrowRight /></span></Link>)}</div></section>
+    </main>
+  </SiteChrome>;
 }

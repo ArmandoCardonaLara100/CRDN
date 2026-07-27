@@ -1,52 +1,30 @@
+/* eslint-disable @next/next/no-page-custom-font -- The HTML source loads these same global font styles. */
 import type { Metadata, Viewport } from "next";
-import { IBM_Plex_Mono, Instrument_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
-
-const instrumentSans = Instrument_Sans({
-  variable: "--font-instrument-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  weight: "400",
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const plexMono = IBM_Plex_Mono({
-  variable: "--font-plex-mono",
-  weight: ["400", "500"],
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://crdn.studio"),
   title: {
-    default: "CRDN — Architecture Studio",
+    default: "CRDN — Retail, Brand & Commercial Design",
     template: "%s — CRDN",
   },
   description:
-    "CRDN is an independent architecture studio in Mexico City designing residences, workplaces and interiors of quiet permanence.",
+    "CRDN es un estudio de diseño comercial. Arquitectura comercial, interiorismo y visual merchandising que convierten el espacio en una herramienta estratégica de negocio.",
   keywords: [
-    "architecture studio",
-    "architect",
-    "residential architecture",
+    "diseño comercial",
+    "retail",
     "commercial architecture",
-    "interior design",
-    "Mexico City",
+    "interiorismo",
+    "visual merchandising",
     "CRDN",
   ],
   openGraph: {
-    title: "CRDN — Architecture Studio",
+    title: "CRDN — Retail, Brand & Commercial Design",
     description:
-      "Residences, workplaces and interiors of quiet permanence. Est. 2009, Mexico City.",
+      "Arquitectura comercial, interiorismo y visual merchandising para convertir el espacio en una herramienta estratégica de negocio.",
     siteName: "CRDN",
     type: "website",
-    locale: "en_US",
+    locale: "es_MX",
   },
   robots: {
     index: true,
@@ -66,13 +44,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${instrumentSans.variable} ${instrumentSerif.variable} ${plexMono.variable} h-full antialiased`}
-    >
-      <body className="flex min-h-full flex-col">
-        {children}
-      </body>
+    <html lang="es">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
