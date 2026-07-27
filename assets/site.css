@@ -985,24 +985,14 @@ em { font-style: italic; }
 .project__hero { margin-top: 2.5rem; }
 .project__body {
   margin-top: 3rem;
-  display: grid;
-  gap: 2.5rem;
+  max-width: 52rem;
 }
-@media (min-width: 64rem) {
-  .project__body { grid-template-columns: repeat(12, 1fr); gap: 2.5rem; }
-  .project__desc { grid-column: span 7; }
-  .project__facts { grid-column: 9 / span 4; }
+.project__desc p {
+  font-size: clamp(1rem, 1.15vw, 1.15rem);
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.8);
 }
-.project__desc p { font-size: 15px; line-height: 1.75; color: rgba(0, 0, 0, 0.8); }
 .project__desc p + p { margin-top: 1.25rem; }
-.project__facts .row {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
-  padding-block: 0.85rem;
-}
-.project__facts .row:last-child { border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
 .project__gallery {
   margin-top: 3rem;
   display: grid;
