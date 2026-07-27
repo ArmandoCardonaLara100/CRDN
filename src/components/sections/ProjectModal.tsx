@@ -48,7 +48,7 @@ export function ProjectModal({
         />
       </div>
 
-      <div className="min-h-0 flex-1 overflow-y-auto lg:w-[26rem] lg:flex-none xl:w-[30rem]">
+      <div className="min-h-0 flex-1 overflow-y-auto lg:w-[30rem] lg:flex-none xl:w-[34rem]">
         <div className="p-7 pt-16 md:p-10 lg:pt-20">
           <p className="eyebrow text-umber">
             Project — {project.category}
@@ -62,23 +62,14 @@ export function ProjectModal({
 
           <div className="mt-8 space-y-5">
             {project.description.map((paragraph, i) => (
-              <p key={i} className="text-[15px] leading-relaxed text-ink/80">
+              <p
+                key={i}
+                className="max-w-[34rem] text-[clamp(1rem,1.15vw,1.15rem)] leading-[1.7] text-ink/80"
+              >
                 {paragraph}
               </p>
             ))}
           </div>
-
-          <dl className="mt-10">
-            {project.facts.map((fact) => (
-              <div
-                key={fact.label}
-                className="flex items-baseline justify-between gap-6 border-t border-ink/15 py-3.5 last:border-b"
-              >
-                <dt className="eyebrow text-umber">{fact.label}</dt>
-                <dd className="text-right text-sm">{fact.value}</dd>
-              </div>
-            ))}
-          </dl>
 
           <a
             href="#contact"

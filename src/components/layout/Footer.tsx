@@ -1,11 +1,38 @@
 "use client";
 
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Mail, MessageCircle, Phone } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { footer, nav, studio } from "@/lib/content";
-import { InstagramIcon, LinkedinIcon } from "@/components/ui/BrandIcon";
+import { InstagramIcon } from "@/components/ui/BrandIcon";
 import { Reveal } from "@/components/ui/Reveal";
+
+const contactActions = [
+  {
+    href: studio.phoneHref,
+    label: "Llamar",
+    icon: <Phone size={16} strokeWidth={1.4} aria-hidden="true" />,
+    external: false,
+  },
+  {
+    href: `mailto:${studio.email}`,
+    label: "Email",
+    icon: <Mail size={16} strokeWidth={1.4} aria-hidden="true" />,
+    external: false,
+  },
+  {
+    href: studio.whatsappHref,
+    label: "WhatsApp",
+    icon: <MessageCircle size={16} strokeWidth={1.4} aria-hidden="true" />,
+    external: true,
+  },
+  {
+    href: studio.instagramHref,
+    label: "Instagram",
+    icon: <InstagramIcon size={16} />,
+    external: true,
+  },
+] as const;
 
 export function Footer() {
   const pathname = usePathname();
@@ -50,27 +77,25 @@ export function Footer() {
                 </ul>
               </nav>
 
-              <div>
-                <p className="eyebrow mb-5 text-bone/50">Follow</p>
-                <div className="flex gap-3">
-                  <a
-                    href={studio.instagramHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="CRDN on Instagram"
-                    className="flex size-11 items-center justify-center rounded-full border border-bone/25 text-bone/80 transition-all duration-300 ease-studio hover:-translate-y-0.5 hover:bg-bone hover:text-ink"
-                  >
-                    <InstagramIcon size={17} />
-                  </a>
-                  <a
-                    href={studio.linkedinHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="CRDN on LinkedIn"
-                    className="flex size-11 items-center justify-center rounded-full border border-bone/25 text-bone/80 transition-all duration-300 ease-studio hover:-translate-y-0.5 hover:bg-bone hover:text-ink"
-                  >
-                    <LinkedinIcon size={17} />
-                  </a>
+              <div className="max-w-sm">
+                <p className="eyebrow mb-5 text-bone/50">Contacto</p>
+                <div className="flex flex-wrap gap-3">
+                  {contactActions.map((action) => (
+                    <a
+                      key={action.label}
+                      href={action.href}
+                      {...(action.external
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
+                      aria-label={action.label}
+                      className="inline-flex items-center gap-2.5 rounded-full border border-bone/25 px-4 py-3 text-[11px] uppercase tracking-[0.16em] text-bone/80 transition-all duration-300 ease-studio hover:-translate-y-0.5 hover:border-bone hover:bg-bone hover:text-ink"
+                    >
+                      <span className="flex size-4 items-center justify-center">
+                        {action.icon}
+                      </span>
+                      <span>{action.label}</span>
+                    </a>
+                  ))}
                 </div>
                 <p className="eyebrow mt-8 text-bone/50">{studio.coordinates}</p>
               </div>

@@ -42,7 +42,7 @@ export function Testimonials() {
             return (
               <Reveal key={t.role} delay={i * 0.1} className="h-full">
                 <figure className="flex h-full flex-col bg-plaster p-8 lg:p-10">
-                  <figcaption className="eyebrow !text-sm !tracking-[0.14em] text-ink md:!text-base">
+                  <figcaption className="eyebrow !text-sm !tracking-[0.14em] text-center text-ink md:!text-base">
                     {t.role}
                   </figcaption>
                   <blockquote className="mt-6 flex-1">
@@ -79,7 +79,7 @@ export function Testimonials() {
       >
         {selected && (
           <figure className="p-8 pt-16 md:p-14 md:pt-16">
-            <figcaption className="eyebrow !text-sm !tracking-[0.14em] text-ink md:!text-base">
+            <figcaption className="eyebrow !text-sm !tracking-[0.14em] text-center text-ink md:!text-base">
               {selected.role}
             </figcaption>
             <blockquote className="mt-6">
