@@ -15,14 +15,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/site.css?v=3" />
+  <link rel="stylesheet" href="assets/site.css?v=8" />
 </head>
 <body>
   <!-- ============================ HEADER ============================ -->
   <header class="header">
     <div class="shell header__inner">
       <a class="brand" href="#home" aria-label="CRDN — inicio">
-        <img class="brand__logo" src="public/images/logo.jpeg" alt="CRDN" />
+        <img class="brand__logo" src="public/images/crdn-wordmark-cropped.png" alt="CRDN" />
       </a>
 
       <nav class="nav" aria-label="Principal">
@@ -51,9 +51,9 @@
         <ul style="list-style:none;margin:0;padding:0;">
           <li class="mobile-menu__item"><a class="mobile-menu__link" href="#home"><span class="eyebrow">01</span><span class="mobile-menu__num">Inicio</span></a></li>
           <li class="mobile-menu__item"><a class="mobile-menu__link" href="#about"><span class="eyebrow">02</span><span class="mobile-menu__num">Estudio</span></a></li>
-          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#insights"><span class="eyebrow">03</span><span class="mobile-menu__num">Insights</span></a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#solutions"><span class="eyebrow">03</span><span class="mobile-menu__num">Soluciones</span></a></li>
           <li class="mobile-menu__item"><a class="mobile-menu__link" href="#projects"><span class="eyebrow">04</span><span class="mobile-menu__num">Proyectos</span></a></li>
-          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#process"><span class="eyebrow">05</span><span class="mobile-menu__num">Proceso</span></a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#insights"><span class="eyebrow">05</span><span class="mobile-menu__num">Insights</span></a></li>
           <li class="mobile-menu__item"><a class="mobile-menu__link" href="#contact"><span class="eyebrow">06</span><span class="mobile-menu__num">Contacto</span></a></li>
         </ul>
       </nav>
@@ -137,12 +137,11 @@
         <div class="about__grid">
           <div class="about__portrait reveal" data-delay="1">
             <figure class="plate" style="margin:0;">
-              <!-- PLACEHOLDER IMAGE: add a studio/portrait photo here -->
-              <div class="plate__frame img-ph ar-portrait">
-                <span class="img-ph__label">Retrato · reemplazar</span>
+              <div class="plate__frame about__logo-frame">
+                <img src="public/images/crdn-wordmark-cropped.png" alt="Equipo de CRDN" />
               </div>
               <figcaption class="plate__caption">
-                <span class="eyebrow">Dirección de CRDN — reemplazar</span>
+                <span class="eyebrow">CRDN - retail, brand & commercial design</span>
               </figcaption>
             </figure>
           </div>
@@ -155,7 +154,7 @@
                 a un objetivo de negocio.
               </p>
               <p class="about__text">
-                Desde 2009 hemos desarrollado más de 370 espacios comerciales en México. Lo que
+                Hemos desarrollado más de 370 espacios comerciales en México. Lo que
                 nos define no es un estilo, sino un método: entender el negocio antes de dibujar
                 y cuidar cada detalle hasta la ejecución.
               </p>
@@ -169,8 +168,8 @@
 
             <div class="reveal" data-delay="1">
               <dl class="about__facts">
-                <div class="about__fact"><dt class="eyebrow">Fundado</dt><dd>2009</dd></div>
-                <div class="about__fact"><dt class="eyebrow">Sede</dt><dd>México</dd></div>
+                <div class="about__fact"><dt class="eyebrow">Experiencia</dt><dd>15+ años</dd></div>
+                <div class="about__fact"><dt class="eyebrow">Sede</dt><dd>León, GTO</dd></div>
                 <div class="about__fact"><dt class="eyebrow">Espacios</dt><dd>370+</dd></div>
                 <div class="about__fact"><dt class="eyebrow">Sectores</dt><dd>12+</dd></div>
               </dl>
@@ -413,69 +412,84 @@
           <p class="section-head__tagline">Nuestro journal editorial sobre diseño comercial, retail y la relación entre arquitectura y negocio.</p>
         </div>
 
-        <!-- Each card is a placeholder blog preview. Replace image, title, date,
-             excerpt and the href="#" with the real article page later. -->
-        <div class="card-grid card-grid--3">
+        <!-- INSIGHTS CARDS — edit each title, image, date, excerpt and href here. -->
+        <div class="card-grid card-grid--4">
 
-          <article class="article-card reveal" data-delay="0">
+          <a class="article-card reveal" data-delay="0" href="insight-por-que-algunas-tiendas-venden-mas.html">
             <div class="article-card__media">
-              <div class="img-ph"><span class="img-ph__label">Imagen del artículo</span></div>
+              <img src="public/images/insights/tiendas-venden-mas-02.jpg" alt="Fachada de tienda deportiva" />
             </div>
             <div class="article-card__meta">
-              <span class="eyebrow">Artículo</span>
-              <span class="eyebrow">Marzo 2026</span>
+              <span class="eyebrow">Diseño comercial</span>
+              <span class="eyebrow">Julio 2026</span>
             </div>
-            <h3 class="article-card__title">El recorrido del cliente empieza en la vitrina.</h3>
+            <h3 class="article-card__title">¿Por qué algunas tiendas venden más que otras? El papel del diseño comercial</h3>
             <p class="article-card__excerpt">
-              Cómo el trazo de una tienda —flujo, jerarquía y puntos de pausa— guía la decisión
-              de compra mucho antes de que el cliente toque el producto.
+              Cómo el recorrido, el layout, la iluminación y la exhibición convierten el espacio
+              en una herramienta estratégica para vender mejor.
             </p>
-            <!-- PLACEHOLDER LINK: replace # with the real article URL -->
-            <a class="article-card__cta" href="https://www.paramountplus.com/home/">
+            <span class="article-card__cta">
               Leer artículo
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </article>
+            </span>
+          </a>
 
-          <article class="article-card reveal" data-delay="1">
+          <a class="article-card reveal" data-delay="1" href="insight-visual-merchandising.html">
             <div class="article-card__media">
-              <div class="img-ph"><span class="img-ph__label">Imagen del artículo</span></div>
+              <img src="public/images/insights/visual-merchandising-02.jpg" alt="Exhibición central de cosméticos" />
             </div>
             <div class="article-card__meta">
-              <span class="eyebrow">Artículo</span>
-              <span class="eyebrow">Febrero 2026</span>
+              <span class="eyebrow">Visual Merchandising</span>
+              <span class="eyebrow">Julio 2026</span>
             </div>
-            <h3 class="article-card__title">Luz, material y deseo: la psicología del retail.</h3>
+            <h3 class="article-card__title">¿Qué es el Visual Merchandising y cómo influye en la decisión de compra?</h3>
             <p class="article-card__excerpt">
-              La temperatura de la luz y la textura de una superficie no son detalles estéticos:
-              son señales que el cliente lee sin darse cuenta.
+              Cómo la presentación visual, el recorrido y la jerarquía de producto orientan al
+              cliente y facilitan la decisión de compra.
             </p>
-            <!-- PLACEHOLDER LINK: replace # with the real article URL -->
-            <a class="article-card__cta" href="#">
+            <span class="article-card__cta">
               Leer artículo
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </article>
+            </span>
+          </a>
 
-          <article class="article-card reveal" data-delay="2">
+          <a class="article-card reveal" data-delay="2" href="insight-arquitectura-comercial.html">
             <div class="article-card__media">
-              <div class="img-ph"><span class="img-ph__label">Imagen del artículo</span></div>
+              <img src="public/images/insights/arquitectura-comercial-01.jpg" alt="Boutique de moda con iluminación arquitectónica" />
             </div>
             <div class="article-card__meta">
-              <span class="eyebrow">Artículo</span>
-              <span class="eyebrow">Enero 2026</span>
+              <span class="eyebrow">Arquitectura comercial</span>
+              <span class="eyebrow">Julio 2026</span>
             </div>
-            <h3 class="article-card__title">Del plano a la marca: diseñar para vender.</h3>
+            <h3 class="article-card__title">¿Qué es la arquitectura comercial y por qué puede aumentar las ventas?</h3>
             <p class="article-card__excerpt">
-              Un espacio comercial no termina en el render. Contamos cómo traducimos la estrategia
-              de una marca en decisiones constructivas concretas.
+              Por qué el espacio físico es un activo estratégico capaz de mejorar la experiencia,
+              la operación y el desempeño comercial.
             </p>
-            <!-- PLACEHOLDER LINK: replace # with the real article URL -->
-            <a class="article-card__cta" href="#">
+            <span class="article-card__cta">
               Leer artículo
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </article>
+            </span>
+          </a>
+
+          <a class="article-card reveal" data-delay="3" href="insight-como-planear-layout-tienda.html">
+            <div class="article-card__media">
+              <img src="public/images/insights/layout-tienda-01.jpg" alt="Vista elevada de una tienda de moda con recorridos, exhibidores y zonas de atención claramente organizados" />
+            </div>
+            <div class="article-card__meta">
+              <span class="eyebrow">Diseño de retail</span>
+              <span class="eyebrow">Julio 2026</span>
+            </div>
+            <h3 class="article-card__title">¿Cómo planear el layout de una tienda? La guía estratégica para diseñar un espacio que venda más</h3>
+            <p class="article-card__excerpt">
+              La forma en que un espacio está organizado determina qué productos se ven primero,
+              cuánto tiempo permanece una persona dentro del establecimiento y qué recorrido realiza.
+            </p>
+            <span class="article-card__cta">
+              Leer artículo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
 
         </div>
       </div>
@@ -541,7 +555,7 @@
   <!-- ============================ FOOTER ============================ -->
   <footer class="footer">
     <div class="shell footer__inner">
-      <p class="footer__word" aria-hidden="true">CRDN</p>
+      <img class="footer__logo" src="public/images/crdn-wordmark-cropped.png" alt="CRDN" />
       <p class="footer__note">Retail, brand &amp; commercial design — diseñamos espacios que trabajan para tu marca desde León, Guanajuato, México.</p>
 
       <ul class="footer__nav">

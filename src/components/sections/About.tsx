@@ -22,7 +22,7 @@ export function About() {
         />
 
         <div className="mt-16 grid gap-14 lg:mt-24 lg:grid-cols-12 lg:gap-10">
-          <Reveal className="lg:col-span-4" delay={0.1}>
+          <Reveal className="min-w-0 lg:col-span-4" delay={0.1}>
             <Plate
               plate={about.portrait}
               number="02"
@@ -31,7 +31,7 @@ export function About() {
             />
           </Reveal>
 
-          <div className="lg:col-span-7 lg:col-start-6">
+          <div className="min-w-0 lg:col-span-7 lg:col-start-6">
             <Reveal>
               <p className="text-lg leading-relaxed">{about.bio[0]}</p>
               <p className="mt-6 max-w-2xl text-[15px] leading-relaxed text-umber">

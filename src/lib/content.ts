@@ -33,7 +33,6 @@ export interface Project {
   category: string;
   summary: string;
   description: string[];
-  facts: { label: string; value: string }[];
   plates: PlateSpec[];
 }
 
@@ -121,14 +120,6 @@ export const about = {
   ],
 };
 
-export interface Article {
-  key: string;
-  date: string;
-  title: string;
-  excerpt: string;
-  href: string;
-}
-
 export const insightsSection = {
   index: "03",
   label: "Insights",
@@ -136,33 +127,6 @@ export const insightsSection = {
   tagline:
     "Nuestro journal editorial sobre diseño comercial, retail y la relación entre arquitectura y negocio.",
 };
-
-export const insights: Article[] = [
-  {
-    key: "vitrina",
-    date: "Marzo 2026",
-    title: "El recorrido del cliente empieza en la vitrina.",
-    excerpt:
-      "Cómo el trazo de una tienda —flujo, jerarquía y puntos de pausa— guía la decisión de compra mucho antes de que el cliente toque el producto.",
-    href: "#",
-  },
-  {
-    key: "luz-material",
-    date: "Febrero 2026",
-    title: "Luz, material y deseo: la psicología del retail.",
-    excerpt:
-      "La temperatura de la luz y la textura de una superficie no son detalles estéticos: son señales que el cliente lee sin darse cuenta.",
-    href: "#",
-  },
-  {
-    key: "plano-marca",
-    date: "Enero 2026",
-    title: "Del plano a la marca: diseñar para vender.",
-    excerpt:
-      "Un espacio comercial no termina en el render. Contamos cómo traducimos la estrategia de una marca en decisiones constructivas concretas.",
-    href: "#",
-  },
-];
 
 export const projectsSection = {
   index: "04",
@@ -182,12 +146,6 @@ export const projects: Project[] = [
     description: [
       "Casa Umbral takes its name from the deep, shaded threshold that organises the plan: a single covered gap between two stone volumes, through which the lake first appears. Bedrooms and service rooms occupy the quiet volume; kitchen, dining and a long terrace share the other, opening west to the water.",
       "The house is built from local volcanic stone, board-marked concrete and sabino wood — materials chosen to weather rather than to be maintained.",
-    ],
-    facts: [
-      { label: "Area", value: "420 m²" },
-      { label: "Status", value: "Completed 2024" },
-      { label: "Scope", value: "Architecture & interiors" },
-      { label: "Photography", value: "Placeholder plates" },
     ],
     plates: [
       {
@@ -219,12 +177,6 @@ export const projects: Project[] = [
       "Asked for an office that would help a law firm retain its people, we answered with a cloister: workspace wrapped around a planted court, so that every desk sits within ten metres of a tree.",
       "Circulation is pushed to the perimeter behind a deep concrete colonnade, shading the glass and giving the interior its measured, columned rhythm.",
     ],
-    facts: [
-      { label: "Area", value: "3,800 m²" },
-      { label: "Status", value: "Completed 2023" },
-      { label: "Scope", value: "Architecture & workplace interiors" },
-      { label: "Certification", value: "LEED Gold (placeholder)" },
-    ],
     plates: [
       {
         motif: "colonnade",
@@ -254,12 +206,6 @@ export const projects: Project[] = [
     description: [
       "On a 28-degree slope facing the Sierra Madre, Casa Ladera refuses the usual podium. Instead the house climbs: five terraced levels, each half a storey above the last, connected by a single top-lit stair that runs like a seam through the section.",
       "Every room keeps its own relationship to the mountain — bedrooms low among the oaks, the living room high in the light.",
-    ],
-    facts: [
-      { label: "Area", value: "510 m²" },
-      { label: "Status", value: "Completed 2022" },
-      { label: "Scope", value: "Architecture" },
-      { label: "Structure", value: "Stepped concrete plates" },
     ],
     plates: [
       {
@@ -291,12 +237,6 @@ export const projects: Project[] = [
       "Commissioned as a small civic room at the edge of a plaza, the pavilion is little more than an arcade: eleven limestone arches, a deep roof, and shade. It refuses programme on purpose — vendors, musicians and quinceañera photographers have all claimed it since.",
       "The stone was quarried forty kilometres away and left rough on the inner face, so the building sounds like the region when the rain arrives.",
     ],
-    facts: [
-      { label: "Area", value: "260 m²" },
-      { label: "Status", value: "Completed 2021" },
-      { label: "Scope", value: "Architecture" },
-      { label: "Material", value: "Yucatán limestone" },
-    ],
     plates: [
       {
         motif: "arches",
@@ -327,12 +267,6 @@ export const projects: Project[] = [
       "A 1960s industrial floor became a home for two ceramicists by resisting subdivision. The plan is one long room, ordered by three oak 'furniture buildings' — a kitchen, a wardrobe, a studio wall — that hold everything and touch neither floor slab nor ceiling.",
       "Between them, the loft stays what it was: light, air and forty metres of uninterrupted floor.",
     ],
-    facts: [
-      { label: "Area", value: "240 m²" },
-      { label: "Status", value: "Completed 2020" },
-      { label: "Scope", value: "Interior architecture" },
-      { label: "Joinery", value: "Solid oak, lime plaster" },
-    ],
     plates: [
       {
         motif: "plan",
@@ -362,12 +296,6 @@ export const projects: Project[] = [
     description: [
       "Torre Alba is deliberately thin. By holding the floor plate to 900 square metres, every workspace sits within seven metres of daylight, and the tower reads on the skyline as a drawn line rather than a block.",
       "The concrete structure is expressed as stacked plates, shading the glass and giving the street a colonnade rather than a lobby wall. It leased ahead of every projection.",
-    ],
-    facts: [
-      { label: "Area", value: "22,400 m²" },
-      { label: "Status", value: "Completed 2019" },
-      { label: "Scope", value: "Architecture" },
-      { label: "Height", value: "24 storeys" },
     ],
     plates: [
       {
@@ -537,14 +465,14 @@ export const contactSection = {
   channels: [
     {
       key: "phone",
-      label: "Phone",
+      label: "Teléfono",
       value: studio.phone,
       href: studio.phoneHref,
       external: false,
     },
     {
       key: "email",
-      label: "Email",
+      label: "Correo",
       value: studio.email,
       href: `mailto:${studio.email}`,
       external: false,
@@ -568,5 +496,5 @@ export const contactSection = {
 
 export const footer = {
   note: "Retail, brand & commercial design — diseñamos espacios que trabajan para tu marca desde León, Guanajuato, México.",
-  copyright: `© ${new Date().getFullYear()} CRDN Studio. All rights reserved.`,
+  copyright: `© ${new Date().getFullYear()} CRDN. Todos los derechos reservados.`,
 };

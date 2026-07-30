@@ -1,11 +1,42 @@
 "use client";
 
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Mail, MessageCircle, Phone } from "lucide-react";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { footer, nav, studio } from "@/lib/content";
-import { InstagramIcon, LinkedinIcon } from "@/components/ui/BrandIcon";
+import { InstagramIcon } from "@/components/ui/BrandIcon";
 import { Reveal } from "@/components/ui/Reveal";
 
+const contactActions = [
+  {
+    href: studio.phoneHref,
+    label: "Llamar",
+    icon: <Phone size={16} strokeWidth={1.4} aria-hidden="true" />,
+    external: false,
+  },
+  {
+    href: `mailto:${studio.email}`,
+    label: "Email",
+    icon: <Mail size={16} strokeWidth={1.4} aria-hidden="true" />,
+    external: false,
+  },
+  {
+    href: studio.whatsappHref,
+    label: "WhatsApp",
+    icon: <MessageCircle size={16} strokeWidth={1.4} aria-hidden="true" />,
+    external: true,
+  },
+  {
+    href: studio.instagramHref,
+    label: "Instagram",
+    icon: <InstagramIcon size={16} />,
+    external: true,
+  },
+] as const;
+
 export function Footer() {
+  const pathname = usePathname();
+  const onLandingPage = pathname === "/";
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -16,12 +47,14 @@ export function Footer() {
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-10 border-b border-bone/15 pb-14">
             <div>
-              <p
-                className="font-display text-[clamp(3.5rem,9vw,7.5rem)] leading-none tracking-[0.08em]"
-                aria-hidden="true"
-              >
-                CRDN
-              </p>
+              <Image
+                src="/images/crdn-wordmark-cropped.png"
+                alt="CRDN"
+                width={1050}
+                height={300}
+                sizes="(max-width: 767px) 176px, (max-width: 1023px) 224px, 256px"
+                className="h-auto w-44 invert sm:w-56 lg:w-64"
+              />
               <p className="mt-6 max-w-md text-sm leading-relaxed text-bone/60">
                 {footer.note}
               </p>
@@ -34,7 +67,7 @@ export function Footer() {
                   {nav.map((item) => (
                     <li key={item.id}>
                       <a
-                        href={item.href}
+                        href={onLandingPage ? item.href : `/${item.href}`}
                         className="text-sm text-bone/80 transition-colors duration-300 hover:text-bone"
                       >
                         {item.label}
@@ -44,27 +77,25 @@ export function Footer() {
                 </ul>
               </nav>
 
-              <div>
-                <p className="eyebrow mb-5 text-bone/50">Follow</p>
-                <div className="flex gap-3">
-                  <a
-                    href={studio.instagramHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="CRDN on Instagram"
-                    className="flex size-11 items-center justify-center rounded-full border border-bone/25 text-bone/80 transition-all duration-300 ease-studio hover:-translate-y-0.5 hover:bg-bone hover:text-ink"
-                  >
-                    <InstagramIcon size={17} />
-                  </a>
-                  <a
-                    href={studio.linkedinHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="CRDN on LinkedIn"
-                    className="flex size-11 items-center justify-center rounded-full border border-bone/25 text-bone/80 transition-all duration-300 ease-studio hover:-translate-y-0.5 hover:bg-bone hover:text-ink"
-                  >
-                    <LinkedinIcon size={17} />
-                  </a>
+              <div className="max-w-sm">
+                <p className="eyebrow mb-5 text-bone/50">Contacto</p>
+                <div className="flex flex-wrap gap-3">
+                  {contactActions.map((action) => (
+                    <a
+                      key={action.label}
+                      href={action.href}
+                      {...(action.external
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
+                      aria-label={action.label}
+                      className="inline-flex items-center gap-2.5 rounded-full border border-bone/25 px-4 py-3 text-[11px] uppercase tracking-[0.16em] text-bone/80 transition-all duration-300 ease-studio hover:-translate-y-0.5 hover:border-bone hover:bg-bone hover:text-ink"
+                    >
+                      <span className="flex size-4 items-center justify-center">
+                        {action.icon}
+                      </span>
+                      <span>{action.label}</span>
+                    </a>
+                  ))}
                 </div>
                 <p className="eyebrow mt-8 text-bone/50">{studio.coordinates}</p>
               </div>

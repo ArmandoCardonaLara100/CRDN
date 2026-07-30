@@ -1,12 +1,4 @@
-src/
 node_modules/
 .next/
 .claude/
 .git/
-package.json
-package-lock.json
-tsconfig.json
-next.config.ts
-next-env.d.ts
-eslint.config.mjs
-postcss.config.mjs
