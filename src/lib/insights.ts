@@ -8,6 +8,8 @@ export type InsightBlock =
 export interface InsightImage {
   src: string;
   alt: string;
+  width?: number;
+  height?: number;
 }
 
 export interface InsightArticle {
@@ -603,6 +605,320 @@ export const insightArticles: InsightArticle[] = [
         images: [
           "/images/insights/arquitectura-comercial-01.jpg",
           "/images/insights/arquitectura-comercial-02.jpg",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "como-planear-layout-tienda",
+    staticHref: "insight-como-planear-layout-tienda.html",
+    category: "Diseño de retail",
+    date: "Julio 2026",
+    title: "¿Cómo planear el layout de una tienda? La guía estratégica para diseñar un espacio que venda más",
+    deck:
+      "Cuando una tienda vende menos de lo esperado, muchas empresas piensan primero en el producto, el precio o la publicidad. Sin embargo, existe un factor que suele pasar desapercibido y que influye directamente en la experiencia del cliente: el layout de la tienda.",
+    excerpt:
+      "La forma en que un espacio está organizado determina qué productos se ven primero, cuánto tiempo permanece una persona dentro del establecimiento y qué recorrido realiza.",
+    featuredImage: "/images/insights/layout-tienda-01.jpg",
+    images: [
+      {
+        src: "/images/insights/layout-tienda-01.jpg",
+        alt: "Vista elevada de una tienda de moda con recorridos, exhibidores y zonas de atención claramente organizados",
+        width: 1536,
+        height: 1024,
+      },
+      {
+        src: "/images/insights/layout-tienda-02.jpg",
+        alt: "Vista cenital de una tienda de moda con layout libre y exhibiciones jerarquizadas",
+        width: 1536,
+        height: 1024,
+      },
+      {
+        src: "/images/insights/layout-tienda-03.jpg",
+        alt: "Interior de tienda de moda con recorrido central, iluminación focal y mobiliario perimetral",
+        width: 1536,
+        height: 1024,
+      },
+    ],
+    blocks: [
+      {
+        type: "paragraph",
+        text: "La forma en que un espacio está organizado determina qué productos se ven primero, cuánto tiempo permanece una persona dentro del establecimiento, qué recorrido realiza y qué oportunidades de compra encuentra durante ese recorrido.",
+      },
+      {
+        type: "paragraph",
+        text: "Por eso, el layout no es simplemente un plano de distribución. Es una decisión estratégica que puede mejorar la experiencia de compra, optimizar la operación del negocio y aumentar el potencial comercial del espacio.",
+      },
+      {
+        type: "paragraph",
+        text: "En este artículo explicamos cómo planear el layout de una tienda, qué elementos deben analizarse antes de diseñarlo y cuáles son los errores más comunes que afectan el desempeño de un punto de venta.",
+      },
+      { type: "heading", level: 2, text: "¿Qué es el layout de una tienda?" },
+      {
+        type: "paragraph",
+        text: "El layout comercial es la organización estratégica del espacio dentro de una tienda. Define la ubicación de los productos, exhibidores, mobiliario, cajas, áreas de circulación y puntos de atención al cliente.",
+      },
+      { type: "paragraph", text: "Su objetivo es equilibrar tres factores fundamentales:" },
+      {
+        type: "list",
+        items: [
+          "Experiencia del cliente.",
+          "Exhibición eficiente del producto.",
+          "Operación rentable del negocio.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Un buen layout ayuda al cliente a orientarse con facilidad, descubrir más productos y completar su compra sin fricciones. Al mismo tiempo, facilita el trabajo del personal, mejora el control del inventario y aprovecha mejor cada metro cuadrado.",
+      },
+      { type: "heading", level: 2, text: "¿Por qué el layout influye en las ventas?" },
+      {
+        type: "paragraph",
+        text: "Las personas rara vez recorren una tienda de forma completamente aleatoria. La distribución del espacio influye en su comportamiento desde el momento en que cruzan la puerta.",
+      },
+      {
+        type: "paragraph",
+        text: "Investigaciones sobre comportamiento del consumidor en retail muestran que la circulación, la visibilidad de los productos y la facilidad de navegación afectan variables como el tiempo de permanencia, la exploración del surtido y la percepción de calidad del establecimiento.",
+      },
+      {
+        type: "paragraph",
+        text: "Autores como Paco Underhill, en Why We Buy, documentan cómo pequeños cambios en la organización del espacio pueden modificar significativamente la forma en que los clientes interactúan con una tienda.",
+      },
+      {
+        type: "paragraph",
+        text: "El layout, por tanto, no garantiza ventas por sí solo, pero sí puede crear condiciones que favorezcan una experiencia más intuitiva y eficiente.",
+      },
+      { type: "heading", level: 2, text: "Antes de dibujar un plano: define el objetivo comercial" },
+      { type: "paragraph", text: "Uno de los errores más comunes es comenzar por el mobiliario o la decoración." },
+      {
+        type: "paragraph",
+        text: "Antes de diseñar el layout, es necesario responder preguntas estratégicas como:",
+      },
+      {
+        type: "list",
+        items: [
+          "¿Qué categorías generan mayor margen?",
+          "¿Qué productos queremos destacar?",
+          "¿Qué recorrido queremos que haga el cliente?",
+          "¿Cuál es el ticket promedio objetivo?",
+          "¿Qué tipo de experiencia queremos transmitir?",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "El layout debe responder a los objetivos del negocio, no únicamente a criterios estéticos.",
+      },
+      { type: "heading", level: 2, text: "Los elementos clave para planear un layout efectivo" },
+      { type: "heading", level: 3, text: "1. La zona de descompresión" },
+      { type: "paragraph", text: "Es el primer espacio que encuentra el cliente al entrar." },
+      {
+        type: "paragraph",
+        text: "En los primeros metros, las personas suelen adaptarse al entorno: ajustan la velocidad, observan el espacio y comienzan a orientarse.",
+      },
+      {
+        type: "paragraph",
+        text: "Por ello, esta zona no debería saturarse con demasiados productos o promociones.",
+      },
+      {
+        type: "paragraph",
+        text: "Su función principal es permitir una transición cómoda entre el exterior y el interior de la tienda.",
+      },
+      { type: "heading", level: 3, text: "2. El recorrido principal" },
+      {
+        type: "paragraph",
+        text: "Todo layout debe establecer un camino claro que invite al cliente a explorar el espacio.",
+      },
+      { type: "paragraph", text: "Un recorrido bien diseñado:" },
+      {
+        type: "list",
+        items: [
+          "expone más productos;",
+          "conecta categorías relacionadas;",
+          "evita puntos muertos;",
+          "mejora la experiencia general.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "El objetivo no es hacer que el cliente camine más, sino ayudarlo a descubrir mejor.",
+      },
+      { type: "heading", level: 3, text: "3. La jerarquía de categorías" },
+      { type: "paragraph", text: "No todas las áreas de una tienda tienen el mismo valor comercial." },
+      {
+        type: "paragraph",
+        text: "Las categorías estratégicas deben ubicarse en zonas de mayor visibilidad y tráfico.",
+      },
+      {
+        type: "paragraph",
+        text: "Los productos de compra recurrente, por ejemplo, suelen colocarse de manera que incentiven el recorrido por otras categorías antes de llegar a ellos.",
+      },
+      { type: "heading", level: 3, text: "4. Los puntos focales" },
+      {
+        type: "paragraph",
+        text: "Un punto focal es un elemento que atrae inmediatamente la atención.",
+      },
+      { type: "paragraph", text: "Puede ser:" },
+      {
+        type: "list",
+        items: [
+          "una exhibición principal;",
+          "un lanzamiento;",
+          "una colección de temporada;",
+          "una instalación visual;",
+          "un elemento arquitectónico.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Los puntos focales ayudan a orientar al cliente y comunican rápidamente qué quiere destacar la marca.",
+      },
+      { type: "heading", level: 3, text: "5. La visibilidad del producto" },
+      {
+        type: "paragraph",
+        text: "El layout debe garantizar que los productos sean fáciles de ver, comparar y alcanzar.",
+      },
+      {
+        type: "paragraph",
+        text: "Exhibiciones demasiado altas, pasillos estrechos o mobiliario que bloquea la visibilidad reducen las oportunidades de interacción con el producto.",
+      },
+      { type: "heading", level: 2, text: "Tipos de layout más utilizados en retail" },
+      { type: "heading", level: 3, text: "Layout en cuadrícula (Grid Layout)" },
+      {
+        type: "paragraph",
+        text: "Es común en supermercados, farmacias y tiendas de conveniencia.",
+      },
+      { type: "paragraph", text: "Ventajas:", emphasis: true },
+      {
+        type: "list",
+        items: [
+          "maximiza la capacidad de exhibición;",
+          "facilita el control del inventario;",
+          "permite recorridos eficientes.",
+        ],
+      },
+      { type: "heading", level: 3, text: "Layout de recorrido o circuito (Loop Layout)" },
+      {
+        type: "paragraph",
+        text: "Utilizado por muchas tiendas de moda, decoración y grandes superficies.",
+      },
+      {
+        type: "paragraph",
+        text: "Conduce al cliente a través de un recorrido definido que expone múltiples categorías.",
+      },
+      { type: "heading", level: 3, text: "Layout libre (Free-Flow Layout)" },
+      {
+        type: "paragraph",
+        text: "Frecuente en boutiques, showrooms y tiendas premium.",
+      },
+      {
+        type: "paragraph",
+        text: "Busca generar una experiencia más relajada y exploratoria.",
+      },
+      {
+        type: "paragraph",
+        text: "Favorece la permanencia y el descubrimiento de productos.",
+      },
+      { type: "heading", level: 2, text: "El papel de la iluminación dentro del layout" },
+      {
+        type: "paragraph",
+        text: "La iluminación no es un elemento independiente del layout; forma parte de su estrategia.",
+      },
+      { type: "paragraph", text: "Una iluminación adecuada permite:" },
+      {
+        type: "list",
+        items: [
+          "destacar productos prioritarios;",
+          "crear profundidad;",
+          "diferenciar zonas del espacio;",
+          "reforzar la identidad de marca.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Las áreas de lanzamiento, promociones o productos premium suelen requerir un tratamiento lumínico distinto al resto del establecimiento.",
+      },
+      { type: "heading", level: 2, text: "Cómo distribuir las zonas calientes y frías" },
+      {
+        type: "paragraph",
+        text: "En todo punto de venta existen áreas que reciben mayor tráfico (zonas calientes) y otras con menor circulación (zonas frías).",
+      },
+      { type: "paragraph", text: "Una planificación inteligente del layout busca:" },
+      {
+        type: "list",
+        items: [
+          "colocar productos estratégicos en zonas calientes;",
+          "activar zonas frías mediante exhibiciones, promociones o cambios de circulación;",
+          "equilibrar el flujo de personas dentro del espacio.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Este análisis es especialmente importante durante remodelaciones o aperturas de nuevas sucursales.",
+      },
+      { type: "heading", level: 2, text: "Errores frecuentes al planear un layout" },
+      {
+        type: "paragraph",
+        text: "Muchas tiendas pierden potencial comercial por decisiones aparentemente pequeñas.",
+      },
+      { type: "paragraph", text: "Los errores más comunes incluyen:" },
+      {
+        type: "list",
+        items: [
+          "saturar el espacio con mobiliario;",
+          "crear pasillos demasiado estrechos;",
+          "colocar productos clave en zonas de baja visibilidad;",
+          "no considerar el comportamiento del cliente;",
+          "priorizar la estética sobre la funcionalidad;",
+          "copiar el layout de otra marca sin adaptarlo al negocio.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Un layout efectivo siempre responde al contexto específico del establecimiento, su público y sus objetivos comerciales.",
+      },
+      { type: "heading", level: 2, text: "Señales de que tu tienda necesita replantear su layout" },
+      {
+        type: "paragraph",
+        text: "Puede ser momento de revisar la distribución del espacio cuando:",
+      },
+      {
+        type: "list",
+        items: [
+          "los clientes no encuentran fácilmente los productos;",
+          "existen áreas con muy poca circulación;",
+          "las categorías principales tienen baja visibilidad;",
+          "disminuye el tiempo de permanencia;",
+          "el crecimiento de ventas se ha estancado;",
+          "el espacio ya no refleja la evolución de la marca.",
+        ],
+      },
+      { type: "heading", level: 2, text: "Conclusión" },
+      {
+        type: "paragraph",
+        text: "Planear el layout de una tienda es mucho más que organizar muebles y exhibidores.",
+      },
+      {
+        type: "paragraph",
+        text: "Es diseñar el recorrido del cliente, definir qué productos tendrán mayor protagonismo y convertir cada metro cuadrado en una herramienta para comunicar, vender y fortalecer la marca.",
+      },
+      {
+        type: "paragraph",
+        text: "Cuando el layout se desarrolla desde una perspectiva de arquitectura comercial, diseño de retail y comportamiento del consumidor, el espacio deja de ser un simple punto de venta y se convierte en una ventaja competitiva para el negocio.",
+      },
+      {
+        type: "callout",
+        heading: "¿Quieres optimizar el layout de tu tienda?",
+        paragraphs: [
+          "En CRDN diseñamos espacios comerciales donde el layout, la arquitectura y el visual merchandising trabajan de forma integrada para mejorar la experiencia del cliente, optimizar la exhibición de producto y aumentar el potencial comercial de cada proyecto.",
+          "Porque un buen layout no solo organiza una tienda; organiza la forma en que las personas compran.",
+        ],
+      },
+      {
+        type: "gallery",
+        images: [
+          "/images/insights/layout-tienda-01.jpg",
+          "/images/insights/layout-tienda-02.jpg",
+          "/images/insights/layout-tienda-03.jpg",
         ],
       },
     ],

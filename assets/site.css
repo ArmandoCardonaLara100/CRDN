@@ -507,10 +507,10 @@ em { font-style: italic; }
 }
 .about__logo-frame {
   aspect-ratio: 717 / 390;
-  padding: clamp(0.25rem, 0.6vw, 0.75rem);
-  background: #efeeea;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
-.about__logo-frame .img-ph__label { display: none; }
 .about__logo-frame img {
   position: relative;
   inset: auto;
@@ -571,6 +571,8 @@ em { font-style: italic; }
   gap: 1.25rem;
 }
 @media (min-width: 48rem) { .card-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 48rem) { .card-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 75rem) { .card-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
 /* ---- Insights (editorial blog cards) ------------------------------------ */
 .article-card { display: flex; flex-direction: column; height: 100%; }
@@ -1016,14 +1018,6 @@ em { font-style: italic; }
   color: rgba(0, 0, 0, 0.8);
 }
 .project__desc p + p { margin-top: 1.25rem; }
-.project__gallery {
-  margin-top: 3rem;
-  display: grid;
-  gap: 1.25rem;
-  grid-template-columns: 1fr;
-}
-@media (min-width: 40rem) { .project__gallery { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 64rem) { .project__gallery { grid-template-columns: repeat(3, 1fr); } }
 
 /* ---- Insights index + editorial article pages -------------------------- */
 .insights-index__intro { margin-top: 1.5rem; max-width: 42rem; color: var(--umber); line-height: 1.75; }
